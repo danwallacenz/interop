@@ -15,6 +15,7 @@
 		CBB4A45B1C9224F600D81D95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB4A4591C9224F600D81D95 /* LaunchScreen.storyboard */; };
 		CBB4A4661C9224F600D81D95 /* interopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4651C9224F600D81D95 /* interopTests.m */; };
 		CBB4A4721C92252500D81D95 /* MyEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4711C92252500D81D95 /* MyEnum.swift */; };
+		CBB4A4741C92298500D81D95 /* SwiftVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,8 @@
 		CBB4A4651C9224F600D81D95 /* interopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = interopTests.m; sourceTree = "<group>"; };
 		CBB4A4671C9224F600D81D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB4A4701C92252400D81D95 /* interop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "interop-Bridging-Header.h"; sourceTree = "<group>"; };
-		CBB4A4711C92252500D81D95 /* MyEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEnum.swift; sourceTree = "<group>"; };
+		CBB4A4711C92252500D81D95 /* MyEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyEnum.swift; path = ../MyEnum.swift; sourceTree = "<group>"; };
+		CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftVCViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,6 @@
 		CBB4A43F1C9224F600D81D95 = {
 			isa = PBXGroup;
 			children = (
-				CBB4A4711C92252500D81D95 /* MyEnum.swift */,
 				CBB4A44A1C9224F600D81D95 /* interop */,
 				CBB4A4641C9224F600D81D95 /* interopTests */,
 				CBB4A4491C9224F600D81D95 /* Products */,
@@ -86,11 +87,13 @@
 		CBB4A44A1C9224F600D81D95 /* interop */ = {
 			isa = PBXGroup;
 			children = (
+				CBB4A4711C92252500D81D95 /* MyEnum.swift */,
 				CBB4A44E1C9224F600D81D95 /* AppDelegate.h */,
 				CBB4A44F1C9224F600D81D95 /* AppDelegate.m */,
 				CBB4A4511C9224F600D81D95 /* ViewController.h */,
 				CBB4A4521C9224F600D81D95 /* ViewController.m */,
 				CBB4A4541C9224F600D81D95 /* Main.storyboard */,
+				CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */,
 				CBB4A4571C9224F600D81D95 /* Assets.xcassets */,
 				CBB4A4591C9224F600D81D95 /* LaunchScreen.storyboard */,
 				CBB4A45C1C9224F600D81D95 /* Info.plist */,
@@ -220,6 +223,7 @@
 				CBB4A4501C9224F600D81D95 /* AppDelegate.m in Sources */,
 				CBB4A4721C92252500D81D95 /* MyEnum.swift in Sources */,
 				CBB4A44D1C9224F600D81D95 /* main.m in Sources */,
+				CBB4A4741C92298500D81D95 /* SwiftVCViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,14 @@ class IconView: UIView {
     init(icon:Icon) {
         self.icon = icon
         super.init(frame: CGRectZero)
+        
+        switch icon {
+        case let .Color(color):
+            self.backgroundColor = color
+        case let .Image(image):
+            let backgroundImage = UIColor(patternImage: image)
+            self.backgroundColor = backgroundImage
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
