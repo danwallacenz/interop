@@ -24,6 +24,8 @@ class SwiftVCViewController: UIViewController {
             iconView.frame = iconViewFrame()
             self.view.addSubview(iconView)
         }
+        
+        title = "A Swift View Controller"
     }
     
     private func iconViewFrame() -> CGRect {

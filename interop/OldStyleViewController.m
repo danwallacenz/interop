@@ -22,6 +22,8 @@
 
     [self addBackgroundIcon];
     
+    [self setTitle:@"Legacy Objective-C View Controller"];
+    
     NSLog(@"\nIn Objective-C, Icon enum is %@", self._icon);
     
     NSLog(@"self.iconImage = %@", self.iconImage);
