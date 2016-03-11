@@ -32,15 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB748B0D1C92657B0099D67C /* OldStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldStyleViewController.h; sourceTree = "<group>"; };
-		CB748B0E1C92657B0099D67C /* OldStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldStyleViewController.m; sourceTree = "<group>"; };
-		CB748B111C92833F0099D67C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		CB748B0D1C92657B0099D67C /* OldStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OldStyleViewController.h; path = "swift-enums/OldStyleViewController.h"; sourceTree = "<group>"; };
+		CB748B0E1C92657B0099D67C /* OldStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OldStyleViewController.m; path = "swift-enums/OldStyleViewController.m"; sourceTree = "<group>"; };
+		CB748B111C92833F0099D67C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Box.swift; path = "swift-enums/Box.swift"; sourceTree = "<group>"; };
 		CBB4A4481C9224F600D81D95 /* interop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4A44C1C9224F600D81D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBB4A44E1C9224F600D81D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CBB4A44F1C9224F600D81D95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CBB4A4511C9224F600D81D95 /* EnumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumViewController.h; sourceTree = "<group>"; };
-		CBB4A4521C9224F600D81D95 /* EnumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumViewController.m; sourceTree = "<group>"; };
+		CBB4A4511C9224F600D81D95 /* EnumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EnumViewController.h; path = "swift-enums/EnumViewController.h"; sourceTree = "<group>"; };
+		CBB4A4521C9224F600D81D95 /* EnumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EnumViewController.m; path = "swift-enums/EnumViewController.m"; sourceTree = "<group>"; };
 		CBB4A4551C9224F600D81D95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB4A4571C9224F600D81D95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB4A45A1C9224F600D81D95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,9 +49,9 @@
 		CBB4A4651C9224F600D81D95 /* interopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = interopTests.m; sourceTree = "<group>"; };
 		CBB4A4671C9224F600D81D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB4A4701C92252400D81D95 /* interop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "interop-Bridging-Header.h"; sourceTree = "<group>"; };
-		CBB4A4711C92252500D81D95 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconView.swift; path = ../IconView.swift; sourceTree = "<group>"; };
-		CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftVCViewController.swift; sourceTree = "<group>"; };
-		CBB4A4781C924B7400D81D95 /* OldStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldStyleViewController.swift; sourceTree = "<group>"; };
+		CBB4A4711C92252500D81D95 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconView.swift; path = "swift-enums/IconView.swift"; sourceTree = "<group>"; };
+		CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftVCViewController.swift; path = "swift-enums/SwiftVCViewController.swift"; sourceTree = "<group>"; };
+		CBB4A4781C924B7400D81D95 /* OldStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OldStyleViewController.swift; path = "swift-enums/OldStyleViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
