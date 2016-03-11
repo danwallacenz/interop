@@ -15,21 +15,37 @@ class SwiftStructViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // testing
+        title = "Swift Struct set from Objective-C"
+        
+//        testing
 //        let user = User(name: "Dan", profileImageURL: NSURL(string:"www.google.com")!)
 //        self.profileView = ProfileView(user: user)
         
         if let profileView = self.profileView {
-            profileView.frame = view.frame
+            
+            profileView.translatesAutoresizingMaskIntoConstraints = false
+            let views:[String: AnyObject] = ["topLayoutGuide": topLayoutGuide,"bottomLayoutGuide": bottomLayoutGuide, "view": view, "profileView": profileView]
             self.view.addSubview(profileView)
+            
+            var allConstraints = [NSLayoutConstraint]()
+            
+            let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+                "V:[topLayoutGuide]-[profileView]-[bottomLayoutGuide]",
+                options: [],
+                metrics: nil,
+                views: views)
+            allConstraints += verticalConstraints
+        
+            let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+                "H:|-[profileView]-|",
+                options: [],
+                metrics: nil,
+                views: views)
+            allConstraints += horizontalConstraints
+            
+            NSLayoutConstraint.activateConstraints(allConstraints)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
