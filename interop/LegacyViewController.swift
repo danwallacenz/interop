@@ -6,7 +6,7 @@
 //  Copyright © 2016 IkeGPS. All rights reserved.
 //
 
-extension LegacyViewController {
+extension OldStyleViewController {
     
     func showIconViewWithIcon(icon: Icon) {
         switch icon {

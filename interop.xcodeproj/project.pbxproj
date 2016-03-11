@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB748B0F1C92657B0099D67C /* OldStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB748B0E1C92657B0099D67C /* OldStyleViewController.m */; };
 		CBB4A44D1C9224F600D81D95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A44C1C9224F600D81D95 /* main.m */; };
 		CBB4A4501C9224F600D81D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A44F1C9224F600D81D95 /* AppDelegate.m */; };
 		CBB4A4531C9224F600D81D95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4521C9224F600D81D95 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB748B0D1C92657B0099D67C /* OldStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldStyleViewController.h; sourceTree = "<group>"; };
+		CB748B0E1C92657B0099D67C /* OldStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldStyleViewController.m; sourceTree = "<group>"; };
 		CBB4A4481C9224F600D81D95 /* interop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4A44C1C9224F600D81D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBB4A44E1C9224F600D81D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 				CBB4A4511C9224F600D81D95 /* ViewController.h */,
 				CBB4A4521C9224F600D81D95 /* ViewController.m */,
 				CBB4A4541C9224F600D81D95 /* Main.storyboard */,
+				CB748B0D1C92657B0099D67C /* OldStyleViewController.h */,
+				CB748B0E1C92657B0099D67C /* OldStyleViewController.m */,
 				CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */,
 				CBB4A4571C9224F600D81D95 /* Assets.xcassets */,
 				CBB4A4591C9224F600D81D95 /* LaunchScreen.storyboard */,
@@ -229,6 +234,7 @@
 			files = (
 				CBB4A4531C9224F600D81D95 /* ViewController.m in Sources */,
 				CBB4A4501C9224F600D81D95 /* AppDelegate.m in Sources */,
+				CB748B0F1C92657B0099D67C /* OldStyleViewController.m in Sources */,
 				CBB4A4721C92252500D81D95 /* IconView.swift in Sources */,
 				CBB4A4771C92485800D81D95 /* LegacyViewController.m in Sources */,
 				CBB4A44D1C9224F600D81D95 /* main.m in Sources */,
@@ -427,6 +433,7 @@
 				CBB4A46C1C9224F600D81D95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBB4A46D1C9224F600D81D95 /* Build configuration list for PBXNativeTarget "interopTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +442,7 @@
 				CBB4A46F1C9224F600D81D95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

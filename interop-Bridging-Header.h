@@ -3,3 +3,4 @@
 //
 
 #import "LegacyViewController.h"
+#import "OldStyleViewController.h"
