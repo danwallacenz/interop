@@ -19,6 +19,9 @@ extension OldStyleViewController {
         }
     }
     
+    /**
+     a shim to allow setting an Objective-C property from a Swift enum (Icon.Color)
+     */
     @objc var iconColor: UIColor? {
         get {
             switch icon {
@@ -32,6 +35,9 @@ extension OldStyleViewController {
         }
     }
     
+    /**
+     a shim to allow setting an Objective-C property from a Swift enum (Icon.Image)
+     */
     @objc var iconImage: UIImage? {
         get {
             switch icon {
