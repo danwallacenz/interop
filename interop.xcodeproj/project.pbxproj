@@ -11,7 +11,7 @@
 		CB748B121C92833F0099D67C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB748B111C92833F0099D67C /* Box.swift */; };
 		CBB4A44D1C9224F600D81D95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A44C1C9224F600D81D95 /* main.m */; };
 		CBB4A4501C9224F600D81D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A44F1C9224F600D81D95 /* AppDelegate.m */; };
-		CBB4A4531C9224F600D81D95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4521C9224F600D81D95 /* ViewController.m */; };
+		CBB4A4531C9224F600D81D95 /* EnumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4521C9224F600D81D95 /* EnumViewController.m */; };
 		CBB4A4561C9224F600D81D95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB4A4541C9224F600D81D95 /* Main.storyboard */; };
 		CBB4A4581C9224F600D81D95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB4A4571C9224F600D81D95 /* Assets.xcassets */; };
 		CBB4A45B1C9224F600D81D95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB4A4591C9224F600D81D95 /* LaunchScreen.storyboard */; };
@@ -39,8 +39,8 @@
 		CBB4A44C1C9224F600D81D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBB4A44E1C9224F600D81D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CBB4A44F1C9224F600D81D95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CBB4A4511C9224F600D81D95 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CBB4A4521C9224F600D81D95 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CBB4A4511C9224F600D81D95 /* EnumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumViewController.h; sourceTree = "<group>"; };
+		CBB4A4521C9224F600D81D95 /* EnumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumViewController.m; sourceTree = "<group>"; };
 		CBB4A4551C9224F600D81D95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB4A4571C9224F600D81D95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB4A45A1C9224F600D81D95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 		CB748B101C9282E20099D67C /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CBB4A4511C9224F600D81D95 /* ViewController.h */,
-				CBB4A4521C9224F600D81D95 /* ViewController.m */,
+				CBB4A4511C9224F600D81D95 /* EnumViewController.h */,
+				CBB4A4521C9224F600D81D95 /* EnumViewController.m */,
 				CB748B0D1C92657B0099D67C /* OldStyleViewController.h */,
 				CB748B0E1C92657B0099D67C /* OldStyleViewController.m */,
 				CBB4A4781C924B7400D81D95 /* OldStyleViewController.swift */,
@@ -238,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB4A4531C9224F600D81D95 /* ViewController.m in Sources */,
+				CBB4A4531C9224F600D81D95 /* EnumViewController.m in Sources */,
 				CBB4A4501C9224F600D81D95 /* AppDelegate.m in Sources */,
 				CB748B0F1C92657B0099D67C /* OldStyleViewController.m in Sources */,
 				CBB4A4721C92252500D81D95 /* IconView.swift in Sources */,

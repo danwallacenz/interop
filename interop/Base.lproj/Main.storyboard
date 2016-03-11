@@ -40,7 +40,7 @@
         <!--Obj-C VC Setting IconView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EnumViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -50,15 +50,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B6-dQ-Las">
-                                <rect key="frame" x="159" y="285" width="283" height="30"/>
-                                <state key="normal" title="Show Swift VC setting Icon enum (image)"/>
+                                <rect key="frame" x="110" y="285" width="381" height="30"/>
+                                <state key="normal" title="Show Swift VC setting IconView with Icon enum (image)"/>
                                 <connections>
                                     <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithImage" id="eGe-ex-u3X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDn-2T-qiu">
-                                <rect key="frame" x="159" y="323" width="276" height="30"/>
-                                <state key="normal" title="Show Swift VC setting Icon enum (color)"/>
+                                <rect key="frame" x="110" y="323" width="374" height="30"/>
+                                <state key="normal" title="Show Swift VC setting IconView with Icon enum (color)"/>
                                 <connections>
                                     <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithColor" id="nNU-Kn-vWF"/>
                                 </connections>
