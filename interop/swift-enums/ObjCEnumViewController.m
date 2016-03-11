@@ -40,6 +40,16 @@
             swiftVCViewController.iconView = [[IconView alloc] initWithColor:[UIColor greenColor]];
         }
     }
+    
+    if ([segue.destinationViewController isKindOfClass:[SwiftStructViewController class]]) {
+    
+        SwiftStructViewController *swiftStructViewController
+            = (SwiftStructViewController *)segue.destinationViewController;
+        
+        if ([segue.identifier isEqualToString:@"showStructVC"]){
+            swiftStructViewController.profileView = [[ProfileView alloc] initWithName:@"Jim" profileImageURL:@"www.stuff.co.nz"];
+        }
+    }
 }
 
 @end

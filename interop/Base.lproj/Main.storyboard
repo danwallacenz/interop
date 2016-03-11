@@ -24,9 +24,18 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="fx1-CC-oYU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQv-Wt-a2K">
+                                <rect key="frame" x="184" y="323" width="233" height="30"/>
+                                <state key="normal" title="Using Swift structs in Objective-C"/>
+                                <connections>
+                                    <segue destination="Kzx-rX-VWJ" kind="show" identifier="showStructVC" id="Qsk-rC-ZIp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BQv-Wt-a2K" firstAttribute="centerX" secondItem="xck-Ef-3cV" secondAttribute="centerX" id="ByL-Wq-qIA"/>
+                            <constraint firstItem="BQv-Wt-a2K" firstAttribute="top" secondItem="xck-Ef-3cV" secondAttribute="bottom" constant="8" id="LQZ-S8-tTA"/>
                             <constraint firstItem="xck-Ef-3cV" firstAttribute="centerY" secondItem="nWf-jC-iZO" secondAttribute="centerY" id="vkH-gU-GoP"/>
                             <constraint firstItem="xck-Ef-3cV" firstAttribute="centerX" secondItem="nWf-jC-iZO" secondAttribute="centerX" id="xmg-66-V8M"/>
                         </constraints>
@@ -144,6 +153,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTz-NQ-li2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-476" y="81"/>
+        </scene>
+        <!--Swift Struct View Controller-->
+        <scene sceneID="Kif-zg-JO0">
+            <objects>
+                <viewController id="Kzx-rX-VWJ" customClass="SwiftStructViewController" customModule="interop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bzB-xh-XdU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ki8-h7-UDe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5D-vO-wje">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0q-Aa-mgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="-582"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
