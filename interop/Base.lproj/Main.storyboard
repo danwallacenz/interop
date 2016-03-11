@@ -8,7 +8,7 @@
         <!--Swift / Objective-C Interoperability-->
         <scene sceneID="mqm-OR-FuJ">
             <objects>
-                <viewController id="D2w-Zq-6DN" sceneMemberID="viewController">
+                <viewController id="D2w-Zq-6DN" customClass="ObjCEnumViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gyz-lb-LFa"/>
                         <viewControllerLayoutGuide type="bottom" id="MvI-lq-ARM"/>
@@ -40,7 +40,7 @@
         <!--Obj-C VC Setting IconView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EnumViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ObjCEnumViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

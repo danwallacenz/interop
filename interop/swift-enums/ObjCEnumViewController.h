@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EnumViewController : UIViewController
+@interface ObjCEnumViewController : UIViewController
 
 
 @end
