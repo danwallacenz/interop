@@ -22,7 +22,7 @@
 
     [self addBackgroundIcon];
     
-    NSLog(@"In Objective-C, Icon enum is %@", self._icon);
+    NSLog(@"\nIn Objective-C, Icon enum is %@", self._icon);
     NSLog(@"Pause");
 
 }
