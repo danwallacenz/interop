@@ -10,6 +10,12 @@
 
 @interface OldStyleViewController : UIViewController
 
+/**
+ 'Boxing' a Swift enum for storing it in an Objective-C object.
+  Can store the Icon enum and pass it on to something else
+ */
+@property (readwrite, strong) id /* Box<Icon> */ _icon;
+
 
 /**
  interfaces of shims to allow passing a Swift enum to an Objective-C class

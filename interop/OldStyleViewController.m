@@ -7,6 +7,7 @@
 //
 
 #import "OldStyleViewController.h"
+#import "interop-Swift.h"
 
 @interface OldStyleViewController ()
 
@@ -20,6 +21,10 @@
     [super viewDidLoad];
 
     [self addBackgroundIcon];
+    
+    NSLog(@"In Objective-C, Icon enum is %@", self._icon);
+    NSLog(@"Pause");
+
 }
 
 - (void)addBackgroundIcon {

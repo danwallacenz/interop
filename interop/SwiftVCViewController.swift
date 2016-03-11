@@ -32,13 +32,50 @@ class SwiftVCViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        guard let myIcon = iconView?.icon else { return }
+        guard let myIcon = iconView?.icon else {
+            print("iconView?.icon is nil")
+            return
+        }
         
         if let oldStyleViewController = segue.destinationViewController as? OldStyleViewController {
             if segue.identifier == "showLegacyVC" {
+                
+//                // pass an Icon enum to Objective-C property
+//                oldStyleViewController.icon = Icon.Color(UIColor.blueColor())
+//                
+//                print("in Swift, oldStyleViewController.icon. dynamicType = \(oldStyleViewController.icon.dynamicType)")
+//                switch oldStyleViewController.icon {
+//                case let .Color(color):
+//                    print("Icon is a color \(color)")
+//                case let .Image(image):
+//                    print("Icon is an image \(image)")
+//                }
+                passIconEnumToObjCclassAndBack(oldStyleViewController)
+                
                 // an example of passing a Swift enum to Objective-C via a shim (OldStylrViewController.swift)
                 oldStyleViewController.showIconViewWithIcon(myIcon)
+                
+
             }
+        }
+    }
+    
+    private func passIconEnumToObjCclassAndBack(oldStyleViewController: OldStyleViewController){
+        // pass an Icon enum to Objective-C property
+//        oldStyleViewController.icon = Icon.Color(UIColor.blueColor())
+        
+        guard let myIcon = iconView?.icon else {
+            print("iconView?.icon is nil")
+            return
+        }
+        
+        oldStyleViewController.icon = myIcon
+        print("in Swift, oldStyleViewController.icon. dynamicType = \(oldStyleViewController.icon.dynamicType)")
+        switch oldStyleViewController.icon {
+        case let .Color(color):
+            print("Icon is a color \(color)")
+        case let .Image(image):
+            print("Icon is an image \(image)")
         }
     }
 }

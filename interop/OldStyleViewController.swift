@@ -6,11 +6,22 @@
 //  Copyright © 2016 IkeGPS. All rights reserved.
 //
 
-/**
-    A shim to allow passing a Swift enum to an Objective-C class
-*/
+
 extension OldStyleViewController {
     
+    // Can store the Icon enum and pass it on to something else
+    var icon: Icon {
+        get {
+            return (_icon as! Box<Icon>).value
+        }
+        set{
+            _icon = Box(newValue)
+        }
+    }
+    
+    /**
+     a shim to allow passing a Swift enum to an Objective-C class
+     */
     func showIconViewWithIcon(icon: Icon) {
         switch icon {
         case let .Image(image):
