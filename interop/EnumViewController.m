@@ -6,14 +6,14 @@
 //  Copyright © 2016 IkeGPS. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "EnumViewController.h"
 #import "interop-Swift.h"
 
-@interface ViewController ()
+@interface EnumViewController ()
 
 @end
 
-@implementation ViewController
+@implementation EnumViewController
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
