@@ -85,6 +85,16 @@
 			name = "view controllers";
 			sourceTree = "<group>";
 		};
+		CB748B151C92B16F0099D67C /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				CBB4A4711C92252500D81D95 /* IconView.swift */,
+				CB748B111C92833F0099D67C /* Box.swift */,
+				CB748B101C9282E20099D67C /* view controllers */,
+			);
+			name = enums;
+			sourceTree = "<group>";
+		};
 		CBB4A43F1C9224F600D81D95 = {
 			isa = PBXGroup;
 			children = (
@@ -108,9 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CBB4A4541C9224F600D81D95 /* Main.storyboard */,
-				CBB4A4711C92252500D81D95 /* IconView.swift */,
-				CB748B111C92833F0099D67C /* Box.swift */,
-				CB748B101C9282E20099D67C /* view controllers */,
+				CB748B151C92B16F0099D67C /* enums */,
 				CBB4A44B1C9224F600D81D95 /* Supporting Files */,
 			);
 			path = interop;
