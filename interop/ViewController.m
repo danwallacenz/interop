@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "interop-Swift.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,25 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[SwiftVCViewController class]]) {
+        
+        SwiftVCViewController *swiftVCViewController
+            = (SwiftVCViewController *)segue.destinationViewController;
+        
+        if([segue.identifier isEqualToString: @"showImage"]){
+            swiftVCViewController.showImage = YES;
+        } else if ([segue.identifier isEqualToString: @"showColor"]){
+            swiftVCViewController.showImage = NO;
+        } else if ([segue.identifier isEqualToString:@"setIconViewWithImage"]){
+            UIImage *image = [UIImage imageNamed:@"ic_motorcycle"];
+            if(image != nil){
+                swiftVCViewController.iconView = [[IconView alloc] initWithImage:image];
+            }
+        }
+    }
 }
 
 @end

@@ -10,32 +10,35 @@ import UIKit
 
 class SwiftVCViewController: UIViewController {
 
-    
+    var showImage:Bool = false
+    private var myIcon:Icon?
+    var iconView:IconView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        let myIcon = Icon.Color(UIColor.redColor())
-        let iconView = IconView(icon: myIcon)
-        iconView.frame = self.view.frame
-        self.view.addSubview(iconView)
+        if let iconView = self.iconView {
+            
+            iconView.frame = self.view.frame
+            self.view.addSubview(iconView)
+            
+        } else {
+        
+            if showImage {
+                if let image = UIImage(named: "iconImage") {
+                    myIcon = Icon.Image(image)
+                } else {
+                    myIcon = Icon.Color(UIColor.redColor())
+                }
+            } else {
+                 myIcon = Icon.Color(UIColor.redColor())
+            }
+            
+            if let icon = myIcon {
+                let iconView = IconView(icon: icon)
+                iconView.frame = self.view.frame
+                self.view.addSubview(iconView)
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

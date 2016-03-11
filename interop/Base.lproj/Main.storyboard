@@ -18,17 +18,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IN0-OX-l8E">
-                                <rect key="frame" x="250" y="285" width="101" height="30"/>
-                                <state key="normal" title="Show Swift VC"/>
+                                <rect key="frame" x="222" y="285" width="157" height="30"/>
+                                <state key="normal" title="Show Swift VC (image)"/>
                                 <connections>
-                                    <segue destination="R6v-Ct-DQM" kind="show" id="ZXX-2V-8GG"/>
+                                    <segue destination="R6v-Ct-DQM" kind="show" identifier="showImage" id="ZXX-2V-8GG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atB-aE-XHN">
+                                <rect key="frame" x="222" y="323" width="157" height="30"/>
+                                <state key="normal" title="Show Swift VC (color)"/>
+                                <connections>
+                                    <segue destination="R6v-Ct-DQM" kind="show" identifier="showColor" id="FwG-xM-Oc2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B6-dQ-Las">
+                                <rect key="frame" x="222" y="361" width="283" height="30"/>
+                                <state key="normal" title="Show Swift VC setting Icon enum (image)"/>
+                                <connections>
+                                    <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithImage" id="eGe-ex-u3X"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5B6-dQ-Las" firstAttribute="top" secondItem="atB-aE-XHN" secondAttribute="bottom" constant="8" id="0DZ-sL-C4F"/>
+                            <constraint firstItem="atB-aE-XHN" firstAttribute="leading" secondItem="IN0-OX-l8E" secondAttribute="leading" id="6Om-op-Ska"/>
+                            <constraint firstItem="5B6-dQ-Las" firstAttribute="leading" secondItem="atB-aE-XHN" secondAttribute="leading" id="B4n-WL-AZD"/>
                             <constraint firstItem="IN0-OX-l8E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qk3-LH-qEt"/>
                             <constraint firstItem="IN0-OX-l8E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lat-1u-9bG"/>
+                            <constraint firstItem="atB-aE-XHN" firstAttribute="width" secondItem="IN0-OX-l8E" secondAttribute="width" id="mSJ-J4-tvw"/>
+                            <constraint firstItem="atB-aE-XHN" firstAttribute="top" secondItem="IN0-OX-l8E" secondAttribute="bottom" constant="8" symbolic="YES" id="yhq-7l-1YD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Obj-C VC" id="B7H-1i-hXf"/>
@@ -74,4 +93,7 @@
             <point key="canvasLocation" x="56" y="141"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eGe-ex-u3X"/>
+    </inferredMetricsTieBreakers>
 </document>

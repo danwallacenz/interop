@@ -34,3 +34,18 @@ class IconView: UIView {
         super.init(coder: aDecoder)
     }
 }
+
+
+// Shim for obj-C
+extension IconView {
+    
+    @objc convenience init(color: UIColor){
+        let icon = Icon.Color(color)
+        self.init(icon: icon)
+    }
+    
+    @objc convenience init(image: UIImage){
+        let icon = Icon.Image(image)
+        self.init(icon: icon)
+    }
+}
