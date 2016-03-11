@@ -23,14 +23,13 @@ class SwiftStructViewController: UIViewController {
         
         if let profileView = self.profileView {
             
-            profileView.translatesAutoresizingMaskIntoConstraints = false
             let views:[String: AnyObject] = ["topLayoutGuide": topLayoutGuide,"bottomLayoutGuide": bottomLayoutGuide, "view": view, "profileView": profileView]
             self.view.addSubview(profileView)
             
             var allConstraints = [NSLayoutConstraint]()
             
             let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-                "V:[topLayoutGuide]-[profileView]-[bottomLayoutGuide]",
+                "V:[topLayoutGuide]-[profileView]-(60)-[bottomLayoutGuide]",
                 options: [],
                 metrics: nil,
                 views: views)
@@ -47,14 +46,20 @@ class SwiftStructViewController: UIViewController {
         }
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let legacyStructViewController = segue.destinationViewController as? ObjCStructViewController {
+            if segue.identifier == "showLegacyVCWithStuct" {
+                legacyStructViewController.showProfileForUserWithName(
+                                                profileView?.user?.name,
+                                                profileImageURL: profileView?.user?.profileImageURL)
+            }
+        }
     }
-    */
-
 }

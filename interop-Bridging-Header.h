@@ -3,3 +3,4 @@
 //
 
 #import "OldStyleViewController.h"
+#import "ObjCStructViewController.h"

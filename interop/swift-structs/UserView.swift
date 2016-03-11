@@ -15,14 +15,13 @@ class ProfileView: UIView {
     
     private(set) var user:User?
     
-//    private let nameLabel = UILabel(frame: CGRect(x: 20, y: 100, width: 200, height: 44))
-//    private let profileImageURLLabel = UILabel(frame: CGRect(x: 20, y: 200, width: 200, height: 44))
-    
     init(user: User) {
         self.user = user
         super.init(frame: CGRectZero)
         
-        self.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.05)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.6)
         let nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.text = self.user?.name
