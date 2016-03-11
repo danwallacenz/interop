@@ -33,13 +33,22 @@
         
         if([segue.identifier isEqualToString: @"showImage"]){
             swiftVCViewController.showImage = YES;
+        
         } else if ([segue.identifier isEqualToString: @"showColor"]){
             swiftVCViewController.showImage = NO;
+        
+            
+            // Set IconView using image
         } else if ([segue.identifier isEqualToString:@"setIconViewWithImage"]){
+            
             UIImage *image = [UIImage imageNamed:@"ic_motorcycle"];
             if(image != nil){
                 swiftVCViewController.iconView = [[IconView alloc] initWithImage:image];
             }
+        
+            // Set IconView using color
+        } else if ([segue.identifier isEqualToString:@"setIconViewWithColor"]){
+            swiftVCViewController.iconView = [[IconView alloc] initWithColor:[UIColor greenColor]];
         }
     }
 }

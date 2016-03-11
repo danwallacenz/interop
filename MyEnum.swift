@@ -36,7 +36,7 @@ class IconView: UIView {
 }
 
 
-// Shim for obj-C
+// shim for Obj-C
 extension IconView {
     
     @objc convenience init(color: UIColor){

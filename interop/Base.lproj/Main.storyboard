@@ -38,6 +38,13 @@
                                     <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithImage" id="eGe-ex-u3X"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDn-2T-qiu">
+                                <rect key="frame" x="222" y="399" width="276" height="30"/>
+                                <state key="normal" title="Show Swift VC setting Icon enum (color)"/>
+                                <connections>
+                                    <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithColor" id="nNU-Kn-vWF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -45,6 +52,8 @@
                             <constraint firstItem="atB-aE-XHN" firstAttribute="leading" secondItem="IN0-OX-l8E" secondAttribute="leading" id="6Om-op-Ska"/>
                             <constraint firstItem="5B6-dQ-Las" firstAttribute="leading" secondItem="atB-aE-XHN" secondAttribute="leading" id="B4n-WL-AZD"/>
                             <constraint firstItem="IN0-OX-l8E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qk3-LH-qEt"/>
+                            <constraint firstItem="iDn-2T-qiu" firstAttribute="top" secondItem="5B6-dQ-Las" secondAttribute="bottom" constant="8" id="Wv1-Vo-HW1"/>
+                            <constraint firstItem="iDn-2T-qiu" firstAttribute="leading" secondItem="5B6-dQ-Las" secondAttribute="leading" id="anf-j1-dn0"/>
                             <constraint firstItem="IN0-OX-l8E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lat-1u-9bG"/>
                             <constraint firstItem="atB-aE-XHN" firstAttribute="width" secondItem="IN0-OX-l8E" secondAttribute="width" id="mSJ-J4-tvw"/>
                             <constraint firstItem="atB-aE-XHN" firstAttribute="top" secondItem="IN0-OX-l8E" secondAttribute="bottom" constant="8" symbolic="YES" id="yhq-7l-1YD"/>
@@ -94,6 +103,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eGe-ex-u3X"/>
+        <segue reference="nNU-Kn-vWF"/>
     </inferredMetricsTieBreakers>
 </document>
