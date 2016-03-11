@@ -6,6 +6,9 @@
 //  Copyright © 2016 IkeGPS. All rights reserved.
 //
 
+/**
+    A shim to allow passing a Swift enum to an Objective-C class
+*/
 extension OldStyleViewController {
     
     func showIconViewWithIcon(icon: Icon) {

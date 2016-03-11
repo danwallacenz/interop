@@ -8,10 +8,12 @@
 
 import UIKit
 
+
+/**
+    An example of passing a Swift enum to Objective-C via a shim (OldStyleViewController.swift)
+*/
 class SwiftVCViewController: UIViewController {
 
-    var showImage:Bool = false
-    private var myIcon:Icon?
     var iconView:IconView?
     
     override func viewDidLoad() {
@@ -21,24 +23,6 @@ class SwiftVCViewController: UIViewController {
             
             iconView.frame = iconViewFrame()
             self.view.addSubview(iconView)
-            
-        } else {
-        
-            if showImage {
-                if let image = UIImage(named: "iconImage") {
-                    myIcon = Icon.Image(image)
-                } else {
-                    myIcon = Icon.Color(UIColor.redColor())
-                }
-            } else {
-                 myIcon = Icon.Color(UIColor.redColor())
-            }
-            
-            if let icon = myIcon {
-                let iconView = IconView(icon: icon)
-                iconView.frame = iconViewFrame()
-                self.view.addSubview(iconView)
-            }
         }
     }
     
@@ -48,23 +32,13 @@ class SwiftVCViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        guard let myIcon = myIcon else { return }
-        
-        print("\(segue.destinationViewController.dynamicType)")
+        guard let myIcon = iconView?.icon else { return }
         
         if let oldStyleViewController = segue.destinationViewController as? OldStyleViewController {
             if segue.identifier == "showLegacyVC" {
-                
+                // an example of passing a Swift enum to Objective-C via a shim (OldStylrViewController.swift)
                 oldStyleViewController.showIconViewWithIcon(myIcon)
             }
         }
-        
-//        if segue.destinationViewController.isKindOfClass(LegacyViewController){
-//            let legacyViewController = segue.destinationViewController as! LegacyViewController
-//
-//            if segue.identifier == "showLegacyVC" {
-//                
-//            }
-//        }
     }
 }

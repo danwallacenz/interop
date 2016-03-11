@@ -17,8 +17,7 @@
 		CBB4A4661C9224F600D81D95 /* interopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4651C9224F600D81D95 /* interopTests.m */; };
 		CBB4A4721C92252500D81D95 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4711C92252500D81D95 /* IconView.swift */; };
 		CBB4A4741C92298500D81D95 /* SwiftVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */; };
-		CBB4A4771C92485800D81D95 /* LegacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4761C92485800D81D95 /* LegacyViewController.m */; };
-		CBB4A4791C924B7400D81D95 /* LegacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4781C924B7400D81D95 /* LegacyViewController.swift */; };
+		CBB4A4791C924B7400D81D95 /* OldStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4781C924B7400D81D95 /* OldStyleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +49,7 @@
 		CBB4A4701C92252400D81D95 /* interop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "interop-Bridging-Header.h"; sourceTree = "<group>"; };
 		CBB4A4711C92252500D81D95 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconView.swift; path = ../IconView.swift; sourceTree = "<group>"; };
 		CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftVCViewController.swift; sourceTree = "<group>"; };
-		CBB4A4751C92485800D81D95 /* LegacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegacyViewController.h; sourceTree = "<group>"; };
-		CBB4A4761C92485800D81D95 /* LegacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegacyViewController.m; sourceTree = "<group>"; };
-		CBB4A4781C924B7400D81D95 /* LegacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyViewController.swift; sourceTree = "<group>"; };
+		CBB4A4781C924B7400D81D95 /* OldStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldStyleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				CBB4A4711C92252500D81D95 /* IconView.swift */,
-				CBB4A4751C92485800D81D95 /* LegacyViewController.h */,
-				CBB4A4761C92485800D81D95 /* LegacyViewController.m */,
-				CBB4A4781C924B7400D81D95 /* LegacyViewController.swift */,
 				CBB4A44E1C9224F600D81D95 /* AppDelegate.h */,
 				CBB4A44F1C9224F600D81D95 /* AppDelegate.m */,
 				CBB4A4511C9224F600D81D95 /* ViewController.h */,
@@ -106,6 +100,7 @@
 				CBB4A4541C9224F600D81D95 /* Main.storyboard */,
 				CB748B0D1C92657B0099D67C /* OldStyleViewController.h */,
 				CB748B0E1C92657B0099D67C /* OldStyleViewController.m */,
+				CBB4A4781C924B7400D81D95 /* OldStyleViewController.swift */,
 				CBB4A4731C92298500D81D95 /* SwiftVCViewController.swift */,
 				CBB4A4571C9224F600D81D95 /* Assets.xcassets */,
 				CBB4A4591C9224F600D81D95 /* LaunchScreen.storyboard */,
@@ -236,10 +231,9 @@
 				CBB4A4501C9224F600D81D95 /* AppDelegate.m in Sources */,
 				CB748B0F1C92657B0099D67C /* OldStyleViewController.m in Sources */,
 				CBB4A4721C92252500D81D95 /* IconView.swift in Sources */,
-				CBB4A4771C92485800D81D95 /* LegacyViewController.m in Sources */,
 				CBB4A44D1C9224F600D81D95 /* main.m in Sources */,
 				CBB4A4741C92298500D81D95 /* SwiftVCViewController.swift in Sources */,
-				CBB4A4791C924B7400D81D95 /* LegacyViewController.swift in Sources */,
+				CBB4A4791C924B7400D81D95 /* OldStyleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

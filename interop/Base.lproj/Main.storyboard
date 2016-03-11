@@ -17,29 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IN0-OX-l8E">
-                                <rect key="frame" x="222" y="285" width="157" height="30"/>
-                                <state key="normal" title="Show Swift VC (image)"/>
-                                <connections>
-                                    <segue destination="R6v-Ct-DQM" kind="show" identifier="showImage" id="ZXX-2V-8GG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atB-aE-XHN">
-                                <rect key="frame" x="222" y="323" width="157" height="30"/>
-                                <state key="normal" title="Show Swift VC (color)"/>
-                                <connections>
-                                    <segue destination="R6v-Ct-DQM" kind="show" identifier="showColor" id="FwG-xM-Oc2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B6-dQ-Las">
-                                <rect key="frame" x="222" y="361" width="283" height="30"/>
+                                <rect key="frame" x="159" y="285" width="283" height="30"/>
                                 <state key="normal" title="Show Swift VC setting Icon enum (image)"/>
                                 <connections>
                                     <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithImage" id="eGe-ex-u3X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDn-2T-qiu">
-                                <rect key="frame" x="222" y="399" width="276" height="30"/>
+                                <rect key="frame" x="159" y="323" width="276" height="30"/>
                                 <state key="normal" title="Show Swift VC setting Icon enum (color)"/>
                                 <connections>
                                     <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithColor" id="nNU-Kn-vWF"/>
@@ -48,15 +34,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5B6-dQ-Las" firstAttribute="top" secondItem="atB-aE-XHN" secondAttribute="bottom" constant="8" id="0DZ-sL-C4F"/>
-                            <constraint firstItem="atB-aE-XHN" firstAttribute="leading" secondItem="IN0-OX-l8E" secondAttribute="leading" id="6Om-op-Ska"/>
-                            <constraint firstItem="5B6-dQ-Las" firstAttribute="leading" secondItem="atB-aE-XHN" secondAttribute="leading" id="B4n-WL-AZD"/>
-                            <constraint firstItem="IN0-OX-l8E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qk3-LH-qEt"/>
+                            <constraint firstItem="5B6-dQ-Las" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="17a-wY-vMj"/>
+                            <constraint firstItem="5B6-dQ-Las" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1zZ-bq-tS7"/>
                             <constraint firstItem="iDn-2T-qiu" firstAttribute="top" secondItem="5B6-dQ-Las" secondAttribute="bottom" constant="8" id="Wv1-Vo-HW1"/>
                             <constraint firstItem="iDn-2T-qiu" firstAttribute="leading" secondItem="5B6-dQ-Las" secondAttribute="leading" id="anf-j1-dn0"/>
-                            <constraint firstItem="IN0-OX-l8E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lat-1u-9bG"/>
-                            <constraint firstItem="atB-aE-XHN" firstAttribute="width" secondItem="IN0-OX-l8E" secondAttribute="width" id="mSJ-J4-tvw"/>
-                            <constraint firstItem="atB-aE-XHN" firstAttribute="top" secondItem="IN0-OX-l8E" secondAttribute="bottom" constant="8" symbolic="YES" id="yhq-7l-1YD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Obj-C VC" id="B7H-1i-hXf"/>
@@ -79,7 +60,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-df-0ne">
                                 <rect key="frame" x="263" y="285" width="74" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.25327119783400687" blue="0.19465442441712488" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Legacy VC"/>
                                 <connections>
                                     <segue destination="Khi-Vz-Go5" kind="show" identifier="showLegacyVC" id="BnX-U6-qw4"/>

@@ -10,6 +10,11 @@
 
 @interface OldStyleViewController : UIViewController
 
+
+/**
+ interfaces of shims to allow passing a Swift enum to an Objective-C class
+ see OldStyleViewController.swift
+ */
 -(void)showIconViewWithColor:(UIColor *)color;
 -(void)showIconViewWithImage:(UIImage *)image;
 

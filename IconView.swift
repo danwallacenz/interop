@@ -15,7 +15,8 @@ enum Icon {
 }
 
 class IconView: UIView {
-    private var icon:Icon?
+    
+    private(set) var icon:Icon?
     
     init(icon:Icon) {
         self.icon = icon
@@ -35,8 +36,9 @@ class IconView: UIView {
     }
 }
 
-
-// shim for Obj-C
+/**
+ shim for initializing a Swift enun from Obj-C
+*/
 extension IconView {
     
     @objc convenience init(color: UIColor){

@@ -18,59 +18,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+
     [self addBackgroundIcon];
-//    if(self.background){
-//        [self addBackgroundIcon];
-//    }
-//    if(self.background){
-//        UIView *newView = [[UIView alloc] initWithFrame:self.view.frame];
-//        [newView setBackgroundColor:self.background];
-//        [self.view addSubview:newView];
-//    }
 }
 
 - (void)addBackgroundIcon {
     if (self.background && self.view) {
-        UIView *newView = [[UIView alloc] initWithFrame:self.view.frame];
+        UIView *newView = [[UIView alloc] initWithFrame:[self iconFrame]];
         [newView setBackgroundColor:self.background];
         [self.view addSubview:newView];
     }
 }
 
+-(CGRect)iconFrame {
+    return CGRectMake(0, 0, self.view.bounds.size.width/2, self.view.bounds.size.height/2);
+}
+
+/**
+ implementation of shim to allow passing a Swift enum to an Objective-C class
+ see OldStyleViewController.swift
+ */
 -(void)showIconViewWithColor:(UIColor *)color{
     self.background = color;
     [self addBackgroundIcon];
-//    if(self.view){
-//        self.view.backgroundColor = self.background;
-//        [self.view setNeedsDisplay];
-//    }
 }
 
+/**
+ implementation of shim to allow passing a Swift enum to an Objective-C class
+ see OldStyleViewController.swift
+ */
 -(void)showIconViewWithImage:(UIImage *)image {
     UIColor *backgroundImage = [[UIColor alloc] initWithPatternImage:image];
     self.background = backgroundImage;
     [self addBackgroundIcon];
-//    if(self.view){
-//        self.view.backgroundColor = self.background;
-//        [self.view setNeedsDisplay];
-//    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
