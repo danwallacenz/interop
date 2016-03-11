@@ -23,8 +23,11 @@
     [self addBackgroundIcon];
     
     NSLog(@"\nIn Objective-C, Icon enum is %@", self._icon);
-    NSLog(@"Pause");
+    
+    NSLog(@"self.iconImage = %@", self.iconImage);
+    NSLog(@"iconColor = %@", self.iconColor);
 
+    NSLog(@"Pause");
 }
 
 - (void)addBackgroundIcon {

@@ -43,12 +43,29 @@ class SwiftVCViewController: UIViewController {
                 // pass an Icon enum to Objective-C property
                 passIconEnumToObjCclassAndBack(oldStyleViewController)
                 
+                // set instance variable on Objective-C class
+                setEnumValueInObjCClass(oldStyleViewController)
+                
                 // an example of passing a Swift enum to Objective-C via a shim (OldStylrViewController.swift)
                 oldStyleViewController.showIconViewWithIcon(myIcon)
             }
         }
     }
     
+    private func setEnumValueInObjCClass(oldStyleViewController: OldStyleViewController) {
+        
+        guard let myIcon = iconView?.icon else {
+            print("iconView?.icon is nil")
+            return
+        }
+        
+        switch myIcon {
+        case let .Color(color):
+            oldStyleViewController.iconColor = color
+        case let .Image(image):
+            oldStyleViewController.iconImage = image
+        }
+    }
     
     /**
         pass a Swift enum to a Objective-C property and get it back
