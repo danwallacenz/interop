@@ -15,24 +15,35 @@ class ProfileView: UIView {
     
     private(set) var user:User?
     
+    private let nameLabel = UILabel();
+    private let profileImageURLLabel = UILabel();
+    
     init(user: User) {
+        
         self.user = user
         super.init(frame: CGRectZero)
         
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
         self.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.6)
-        let nameLabel = UILabel()
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         nameLabel.text = self.user?.name
         self.addSubview(nameLabel)
         
-        let profileImageURLLabel = UILabel()
-        profileImageURLLabel.translatesAutoresizingMaskIntoConstraints = false
         profileImageURLLabel.text = user.profileImageURL.path
         self.addSubview(profileImageURLLabel)
         
-        // layout
+        layout();
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    private func layout(){
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        profileImageURLLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         var allConstraints = [NSLayoutConstraint]()
         let views = ["nameLabel": nameLabel, "profileImageURLLabel": profileImageURLLabel]
         
@@ -58,10 +69,6 @@ class ProfileView: UIView {
         allConstraints += profileImageURLLabelHorizontalConstraints
         
         NSLayoutConstraint.activateConstraints(allConstraints)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
 }
 

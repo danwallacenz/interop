@@ -12,7 +12,8 @@
 
 /**
  'Boxing' a Swift enum for storing it in an Objective-C object.
-  Can store the Icon enum and pass it on to something else
+  Can store the Icon enum and pass it on to something else.
+  Cannot define storage in an extension. See OldStyleViewController.swift.
  */
 @property (readwrite, strong) id /* Box<Icon> */ _icon;
 
