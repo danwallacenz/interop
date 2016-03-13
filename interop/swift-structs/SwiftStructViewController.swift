@@ -17,6 +17,8 @@ class SwiftStructViewController: UIViewController {
 
         title = "Swift Struct set from Objective-C"
         
+        view.backgroundColor = UIColor.redColor()
+        
 //        testing
 //        let user = User(name: "Dan", profileImageURL: NSURL(string:"www.google.com")!)
 //        self.profileView = ProfileView(user: user)

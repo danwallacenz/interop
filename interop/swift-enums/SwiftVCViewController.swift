@@ -19,6 +19,8 @@ class SwiftVCViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = UIColor.redColor()
+        
         if let iconView = self.iconView {
             
             iconView.frame = iconViewFrame()

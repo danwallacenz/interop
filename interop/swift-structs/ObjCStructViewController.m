@@ -20,12 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor: [UIColor greenColor]];
+    
     if(self.profileView){
         UIView *myProfileView = self.profileView;
         
         [self.view addSubview: self.profileView];
-        [self.view setBackgroundColor:[UIColor greenColor]];
-//        [self.view setBackgroundColor:[UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.5]];
        
         NSDictionary *views = NSDictionaryOfVariableBindings(myProfileView);
         

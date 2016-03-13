@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.view setBackgroundColor: [UIColor greenColor]];
+    
     [self addBackgroundIcon];
     
     [self setTitle:@"Legacy Objective-C View Controller"];

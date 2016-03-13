@@ -15,6 +15,11 @@
 
 @implementation ObjCEnumViewController
 
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view setBackgroundColor: [UIColor greenColor]];
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
@@ -37,19 +42,9 @@
         // Set IconView using color
         if ([segue.identifier isEqualToString:@"setIconViewWithColor"]){
             
-            swiftVCViewController.iconView = [[IconView alloc] initWithColor:[UIColor greenColor]];
+            swiftVCViewController.iconView = [[IconView alloc] initWithColor:[UIColor blueColor]];
         }
     }
-    
-//    if ([segue.destinationViewController isKindOfClass:[SwiftStructViewController class]]) {
-//    
-//        SwiftStructViewController *swiftStructViewController
-//            = (SwiftStructViewController *)segue.destinationViewController;
-//        
-//        if ([segue.identifier isEqualToString:@"showStructVC"]){
-//            swiftStructViewController.profileView = [[ProfileView alloc] initWithName:@"Jim" profileImageURL:@"www.stuff.co.nz"];
-//        }
-//    }
 }
 
 @end

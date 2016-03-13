@@ -15,7 +15,10 @@
 
 @implementation MainObjCViewController
 
-
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view setBackgroundColor: [UIColor greenColor]];
+}
 
 #pragma mark - Navigation
 
