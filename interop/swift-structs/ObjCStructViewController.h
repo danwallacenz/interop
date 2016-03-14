@@ -12,4 +12,6 @@
 
 -(void)showProfileForUserWithName:(NSString *)name profileImageURL: (NSURL *)url;
 
+@property (readwrite, strong) id /* Box<User> */ _user;
+
 @end

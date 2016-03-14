@@ -13,6 +13,8 @@
 		CB748B1A1C92BDD10099D67C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB748B191C92BDD10099D67C /* UserView.swift */; };
 		CB748B1C1C92C15A0099D67C /* SwiftStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB748B1B1C92C15A0099D67C /* SwiftStructViewController.swift */; };
 		CB748B1F1C9371030099D67C /* ObjCStructViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB748B1E1C9371030099D67C /* ObjCStructViewController.m */; };
+		CB7D15381C96670200898CC7 /* ObjCStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D15371C96670200898CC7 /* ObjCStructViewController.swift */; };
+		CB7D153A1C966C5900898CC7 /* BoxedUserReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D15391C966C5900898CC7 /* BoxedUserReceiver.swift */; };
 		CBB4A44D1C9224F600D81D95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A44C1C9224F600D81D95 /* main.m */; };
 		CBB4A4501C9224F600D81D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A44F1C9224F600D81D95 /* AppDelegate.m */; };
 		CBB4A4531C9224F600D81D95 /* ObjCEnumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4A4521C9224F600D81D95 /* ObjCEnumViewController.m */; };
@@ -45,6 +47,8 @@
 		CB748B1B1C92C15A0099D67C /* SwiftStructViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftStructViewController.swift; path = "swift-structs/SwiftStructViewController.swift"; sourceTree = "<group>"; };
 		CB748B1D1C9371030099D67C /* ObjCStructViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjCStructViewController.h; path = "swift-structs/ObjCStructViewController.h"; sourceTree = "<group>"; };
 		CB748B1E1C9371030099D67C /* ObjCStructViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjCStructViewController.m; path = "swift-structs/ObjCStructViewController.m"; sourceTree = "<group>"; };
+		CB7D15371C96670200898CC7 /* ObjCStructViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjCStructViewController.swift; path = "swift-structs/ObjCStructViewController.swift"; sourceTree = "<group>"; };
+		CB7D15391C966C5900898CC7 /* BoxedUserReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoxedUserReceiver.swift; path = "swift-structs/BoxedUserReceiver.swift"; sourceTree = "<group>"; };
 		CBB4A4481C9224F600D81D95 /* interop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4A44C1C9224F600D81D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBB4A44E1C9224F600D81D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				CB748B1B1C92C15A0099D67C /* SwiftStructViewController.swift */,
 				CB748B1D1C9371030099D67C /* ObjCStructViewController.h */,
 				CB748B1E1C9371030099D67C /* ObjCStructViewController.m */,
+				CB7D15371C96670200898CC7 /* ObjCStructViewController.swift */,
+				CB7D15391C966C5900898CC7 /* BoxedUserReceiver.swift */,
 			);
 			name = structs;
 			sourceTree = "<group>";
@@ -270,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7D15381C96670200898CC7 /* ObjCStructViewController.swift in Sources */,
 				CBB4A4531C9224F600D81D95 /* ObjCEnumViewController.m in Sources */,
 				CBB4A4501C9224F600D81D95 /* AppDelegate.m in Sources */,
 				CB748B0F1C92657B0099D67C /* OldStyleViewController.m in Sources */,
+				CB7D153A1C966C5900898CC7 /* BoxedUserReceiver.swift in Sources */,
 				CBB4A4721C92252500D81D95 /* IconView.swift in Sources */,
 				CBB4A44D1C9224F600D81D95 /* main.m in Sources */,
 				3C09C6101C952FA20098BC39 /* MainObjCViewController.m in Sources */,

@@ -12,6 +12,13 @@ class SwiftStructViewController: UIViewController {
 
     var profileView:ProfileView?
     
+//    private var myProfileView:ProfileView?
+//    var icon:Box<AnyObject>? {
+//        didSet{
+//            
+//        }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,6 +65,11 @@ class SwiftStructViewController: UIViewController {
         
         if let legacyStructViewController = segue.destinationViewController as? ObjCStructViewController {
             if segue.identifier == "showLegacyVCWithStuct" {
+                
+                if let user = profileView?.user {
+                    legacyStructViewController.user = user
+                }
+                
                 legacyStructViewController.showProfileForUserWithName(
                                                 profileView?.user?.name,
                                                 profileImageURL: profileView?.user?.profileImageURL)
