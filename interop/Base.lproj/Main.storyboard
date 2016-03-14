@@ -99,12 +99,43 @@
                     <view key="view" contentMode="scaleToFill" id="Cd1-7C-7dB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quL-5w-FZA">
+                                <rect key="frame" x="409" y="562" width="171" height="30"/>
+                                <state key="normal" title="Pass through Box&lt;User&gt;"/>
+                                <connections>
+                                    <segue destination="Ae0-Yh-Cw3" kind="show" identifier="showSwiftBoxedUserViewController" id="Nc7-0H-v3F"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3hn-4a-S09" firstAttribute="top" secondItem="quL-5w-FZA" secondAttribute="bottom" constant="8" symbolic="YES" id="j5E-hW-sqe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="quL-5w-FZA" secondAttribute="trailing" id="udv-PV-0DC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFZ-WN-jQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845" y="-406"/>
+        </scene>
+        <!--Swift Boxed User View Controller-->
+        <scene sceneID="mHS-WR-gD2">
+            <objects>
+                <viewController id="Ae0-Yh-Cw3" customClass="SwiftBoxedUserViewController" customModule="interop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KDN-p8-2vJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kem-3z-Pnx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KL5-Cr-FSa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Fi-3Q-FYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="-405"/>
         </scene>
         <!--SwiftVC View Controller-->
         <scene sceneID="nyY-hc-Bvz">

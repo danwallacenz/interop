@@ -53,4 +53,26 @@
     self.profileView = [[ProfileView alloc] initWithName:name profileImageURL: url.path];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.destinationViewController isKindOfClass:[SwiftBoxedUserViewController class]]){
+        SwiftBoxedUserViewController *swiftBoxedUserViewController
+            = (SwiftBoxedUserViewController *)segue.destinationViewController;
+        
+        if ([segue.identifier isEqualToString:@"showSwiftBoxedUserViewController"]){
+            [swiftBoxedUserViewController setUser:self._user];
+        }
+    }
+}
+
 @end
+
+
+
+
+
+
+
+
+
+

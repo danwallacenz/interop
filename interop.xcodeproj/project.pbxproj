@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C09C6101C952FA20098BC39 /* MainObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09C60F1C952FA20098BC39 /* MainObjCViewController.m */; };
+		3CBC6FEA1C96874C00C33716 /* SwiftBoxedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC6FE91C96874C00C33716 /* SwiftBoxedUserViewController.swift */; };
 		CB748B0F1C92657B0099D67C /* OldStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB748B0E1C92657B0099D67C /* OldStyleViewController.m */; };
 		CB748B121C92833F0099D67C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB748B111C92833F0099D67C /* Box.swift */; };
 		CB748B1A1C92BDD10099D67C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB748B191C92BDD10099D67C /* UserView.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		3C09C60E1C952FA20098BC39 /* MainObjCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainObjCViewController.h; sourceTree = "<group>"; };
 		3C09C60F1C952FA20098BC39 /* MainObjCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainObjCViewController.m; sourceTree = "<group>"; };
+		3CBC6FE91C96874C00C33716 /* SwiftBoxedUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftBoxedUserViewController.swift; path = "swift-structs/SwiftBoxedUserViewController.swift"; sourceTree = "<group>"; };
 		CB748B0D1C92657B0099D67C /* OldStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OldStyleViewController.h; path = "swift-enums/OldStyleViewController.h"; sourceTree = "<group>"; };
 		CB748B0E1C92657B0099D67C /* OldStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OldStyleViewController.m; path = "swift-enums/OldStyleViewController.m"; sourceTree = "<group>"; };
 		CB748B111C92833F0099D67C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Box.swift; path = "swift-enums/Box.swift"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				CB748B1E1C9371030099D67C /* ObjCStructViewController.m */,
 				CB7D15371C96670200898CC7 /* ObjCStructViewController.swift */,
 				CB7D15391C966C5900898CC7 /* BoxedUserReceiver.swift */,
+				3CBC6FE91C96874C00C33716 /* SwiftBoxedUserViewController.swift */,
 			);
 			name = structs;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				CBB4A44D1C9224F600D81D95 /* main.m in Sources */,
 				3C09C6101C952FA20098BC39 /* MainObjCViewController.m in Sources */,
 				CB748B121C92833F0099D67C /* Box.swift in Sources */,
+				3CBC6FEA1C96874C00C33716 /* SwiftBoxedUserViewController.swift in Sources */,
 				CBB4A4741C92298500D81D95 /* SwiftVCViewController.swift in Sources */,
 				CB748B1A1C92BDD10099D67C /* UserView.swift in Sources */,
 				CB748B1F1C9371030099D67C /* ObjCStructViewController.m in Sources */,
