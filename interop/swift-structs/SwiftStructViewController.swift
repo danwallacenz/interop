@@ -31,7 +31,7 @@ class SwiftStructViewController: UIViewController {
             var allConstraints = [NSLayoutConstraint]()
             
             let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-                "V:[topLayoutGuide]-[profileView]-(60)-[bottomLayoutGuide]",
+                "V:[topLayoutGuide]-[profileView]",
                 options: [],
                 metrics: nil,
                 views: views)

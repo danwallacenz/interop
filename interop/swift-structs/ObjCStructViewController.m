@@ -31,7 +31,7 @@
         
         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(50)-[myProfileView]-(50)-|" options: 0 metrics:nil views:views]];
         
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(140)-[myProfileView]-(40)-|" options:0 metrics:nil views:views]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(140)-[myProfileView]" options:0 metrics:nil views:views]];
     }
 }
 

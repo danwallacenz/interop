@@ -22,8 +22,9 @@ class ProfileView: UIView {
         
         self.user = user
         super.init(frame: CGRectZero)
-        
-        self.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.6)
+
+        self.backgroundColor = UIColor.yellowColor()
+//        self.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.6)
         
         nameLabel.text = self.user?.name
         self.addSubview(nameLabel)
@@ -48,7 +49,7 @@ class ProfileView: UIView {
         let views = ["nameLabel": nameLabel, "profileImageURLLabel": profileImageURLLabel]
         
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-[nameLabel]-[profileImageURLLabel]",
+            "V:|-[nameLabel]-[profileImageURLLabel]-|",
             options: [],
             metrics: nil,
             views: views)
