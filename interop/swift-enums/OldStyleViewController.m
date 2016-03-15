@@ -22,14 +22,16 @@
 
     [self.view setBackgroundColor: [UIColor greenColor]];
     
-    [self addBackgroundIcon];
+//    [self addBackgroundIcon];
     
     [self setTitle:@"Legacy Objective-C View Controller"];
     
     NSLog(@"\nIn Objective-C, Icon enum is %@", self._icon);
     
-    NSLog(@"self.iconImage = %@", self.iconImage);
-    NSLog(@"iconColor = %@", self.iconColor);
+    [self addIconView];
+    
+//    NSLog(@"self.iconImage = %@", self.iconImage);
+//    NSLog(@"iconColor = %@", self.iconColor);
 
     NSLog(@"Pause");
 }
@@ -41,6 +43,12 @@
         [self.view addSubview:newView];
     }
 }
+
+//-(void)addIconView:(id) icon {
+//    
+//    IconView *iconView = [IconView alloc] in
+//    
+//}
 
 -(CGRect)iconFrame {
     return CGRectMake(0, 0, self.view.bounds.size.width/2, self.view.bounds.size.height/2);

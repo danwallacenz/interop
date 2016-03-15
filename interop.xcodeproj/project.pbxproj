@@ -103,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				CBB4A4711C92252500D81D95 /* IconView.swift */,
-				CB748B111C92833F0099D67C /* Box.swift */,
 				CB748B101C9282E20099D67C /* view controllers */,
 			);
 			name = enums;
@@ -147,6 +146,7 @@
 				CBB4A4541C9224F600D81D95 /* Main.storyboard */,
 				3C09C60E1C952FA20098BC39 /* MainObjCViewController.h */,
 				3C09C60F1C952FA20098BC39 /* MainObjCViewController.m */,
+				CB748B111C92833F0099D67C /* Box.swift */,
 				CB748B181C92BCA80099D67C /* structs */,
 				CB748B151C92B16F0099D67C /* enums */,
 				CBB4A44B1C9224F600D81D95 /* Supporting Files */,

@@ -22,17 +22,41 @@ class SwiftVCViewController: UIViewController {
         view.backgroundColor = UIColor.redColor()
         
         if let iconView = self.iconView {
-            
-            iconView.frame = iconViewFrame()
-            self.view.addSubview(iconView)
+            layout(iconView: iconView)
+//            iconView.frame = iconViewFrame()
+//            self.view.addSubview(iconView)
         }
         
         title = "A Swift View Controller"
     }
     
-    private func iconViewFrame() -> CGRect {
-        return CGRect(origin: CGPointZero, size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height/4.0))
+    private func layout(iconView iconView: IconView) {
+        
+        let views:[String: AnyObject] = ["topLayoutGuide": topLayoutGuide,"bottomLayoutGuide": bottomLayoutGuide, "view": view, "iconView": iconView]
+        self.view.addSubview(iconView)
+        
+        var allConstraints = [NSLayoutConstraint]()
+        
+        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:[topLayoutGuide]-[iconView]",
+            options: [],
+            metrics: nil,
+            views: views)
+        allConstraints += verticalConstraints
+        
+        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-[iconView]",
+            options: [],
+            metrics: nil,
+            views: views)
+        allConstraints += horizontalConstraints
+        
+        NSLayoutConstraint.activateConstraints(allConstraints)
     }
+    
+//    private func iconViewFrame() -> CGRect {
+//        return CGRect(origin: CGPointZero, size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height/4.0))
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

@@ -12,13 +12,6 @@ class SwiftStructViewController: UIViewController {
 
     var profileView:ProfileView?
     
-//    private var myProfileView:ProfileView?
-//    var icon:Box<AnyObject>? {
-//        didSet{
-//            
-//        }
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

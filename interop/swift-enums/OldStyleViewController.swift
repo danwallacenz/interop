@@ -19,6 +19,32 @@ extension OldStyleViewController {
         }
     }
     
+    @objc func addIconView() {
+        
+        let iconView = IconView(icon: icon)
+        self.view.addSubview(iconView)
+        
+        let views:[String: AnyObject] = ["topLayoutGuide": topLayoutGuide,"bottomLayoutGuide": bottomLayoutGuide, "view": view, "iconView": iconView]
+        
+        var allConstraints = [NSLayoutConstraint]()
+        
+        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:[iconView]-(50)-|",
+            options: [],
+            metrics: nil,
+            views: views)
+        allConstraints += verticalConstraints
+        
+        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-[iconView]",
+            options: [],
+            metrics: nil,
+            views: views)
+        allConstraints += horizontalConstraints
+        
+        NSLayoutConstraint.activateConstraints(allConstraints)
+    }
+    
     /**
      a shim to allow setting an Objective-C property from a Swift enum (Icon.Color)
      */

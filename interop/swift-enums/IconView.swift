@@ -24,15 +24,59 @@ class IconView: UIView {
         
         switch icon {
         case let .Color(color):
-            self.backgroundColor = color
+            let colorView = UIView()
+            colorView.backgroundColor = color
+            layout(colorView)
         case let .Image(image):
-            let backgroundImage = UIColor(patternImage: image)
-            self.backgroundColor = backgroundImage
+            let imageView = UIImageView(image: image)
+            imageView.contentMode = .ScaleAspectFill
+            layout(imageView)
         }
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    private func layout(view: UIView){
+        
+        addSubview(view)
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        var allConstraints = [NSLayoutConstraint]()
+        let views = ["view": view]
+        
+        var verticalConstraintString:String?
+        var horizontalConstraintString:String?
+        
+        switch icon! {
+        case .Color:
+            verticalConstraintString = "V:|-[view(44)]"
+            horizontalConstraintString = "H:|-[view(44)]"
+        case .Image:
+            verticalConstraintString = "V:|-[view]"
+            horizontalConstraintString = "H:|-[view]"
+        }
+        
+            let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+                verticalConstraintString!,
+                options: [],
+                metrics: nil,
+                views: views)
+        
+
+        allConstraints += verticalConstraints
+        
+        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+            horizontalConstraintString!,
+            options: [],
+            metrics: nil,
+            views: views)
+        allConstraints += horizontalConstraints
+        
+        NSLayoutConstraint.activateConstraints(allConstraints)
     }
 }
 
