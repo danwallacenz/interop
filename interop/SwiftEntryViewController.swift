@@ -17,19 +17,40 @@ class SwiftEntryViewController: UIViewController {
     
     @IBOutlet weak var rightEnumContainerView: UIView!
     
+    let leftIcon = Icon.Color(UIColor(red: 100.0/255.0, green: 20/255.0, blue: 10/255.0, alpha: 1.0))
+    
+    var rightIcon: Icon? {
+    get {
+        if let image = UIImage(named: "ic_motorcycle") {
+            return Icon.Image(image)
+        }
+        return nil
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addLeftEnum()
+        addRightEnum()
 
         // Do any additional setup after loading the view.
     }
 
     func addLeftEnum(){
-        let icon = Icon.Color(UIColor(red: 100.0/255.0, green: 100/255.0, blue: 100/255.0, alpha: 1.0))
+        let icon = Icon.Color(UIColor(red: 100.0/255.0, green: 20/255.0, blue: 10/255.0, alpha: 1.0))
         let iconView = IconView(icon: icon)
         layout(iconView: iconView, container: leftEnumContainerView)
+    }
+    
+    func addRightEnum(){
+        
+        if let rightIcon = rightIcon {
+            let iconView = IconView(icon: rightIcon)
+            layout(iconView: iconView, container: rightEnumContainerView)
+        } else {
+            print("image not found")
+        }
     }
     
     /*
@@ -68,6 +89,4 @@ class SwiftEntryViewController: UIViewController {
         
         NSLayoutConstraint.activateConstraints(allConstraints)
     }
-    
-    
 }
