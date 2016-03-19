@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FI8-YO-NLj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qdz-Dd-xFO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Swift / Objective-C Interoperability-->
@@ -117,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFZ-WN-jQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-406"/>
+            <point key="canvasLocation" x="2657" y="-406"/>
         </scene>
         <!--Swift Boxed User View Controller-->
         <scene sceneID="mHS-WR-gD2">
@@ -135,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Fi-3Q-FYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2532" y="-405"/>
+            <point key="canvasLocation" x="3344" y="-405"/>
         </scene>
         <!--SwiftVC View Controller-->
         <scene sceneID="nyY-hc-Bvz">
@@ -233,7 +234,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0q-Aa-mgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="-406"/>
+            <point key="canvasLocation" x="1805" y="-406"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tcs-X6-p94">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qdz-Dd-xFO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fSF-PO-pLq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PGv-QK-V12" kind="relationship" relationship="rootViewController" id="0NR-zg-ScF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHh-oo-DJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-253" y="-851"/>
+        </scene>
+        <!--Swift Entry View Controller-->
+        <scene sceneID="pe1-5n-nJj">
+            <objects>
+                <viewController id="PGv-QK-V12" customClass="SwiftEntryViewController" customModule="interop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f3q-bi-TAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="8xE-pv-tOA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wjt-O6-rwX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-ON-qVj" userLabel="Struct View">
+                                <rect key="frame" x="20" y="101" width="560" height="100"/>
+                                <color key="backgroundColor" red="0.67512542606361303" green="0.62963337160845168" blue="0.99342542886734009" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="rqT-fD-MJW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3D-ua-T8o" userLabel="Left Enum View">
+                                <rect key="frame" x="20" y="237" width="224" height="100"/>
+                                <color key="backgroundColor" red="0.99342542886734009" green="0.66863816559757672" blue="0.54330761106091308" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="xj3-F3-P0i"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-wg-oZY" userLabel="Right View">
+                                <rect key="frame" x="356" y="237" width="224" height="100"/>
+                                <color key="backgroundColor" red="0.99342542889999996" green="0.6686381656" blue="0.54330761110000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zOt-vL-G6Q"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Struct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-Op-e3T">
+                                <rect key="frame" x="20" y="72" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Enum (value 1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zre-dc-Hcd">
+                                <rect key="frame" x="20" y="209" width="170" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Enum (value 2)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-7P-cwQ">
+                                <rect key="frame" x="356" y="209" width="172" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvs-zS-Ng0">
+                                <rect key="frame" x="362" y="562" width="218" height="30"/>
+                                <state key="normal" title="Display Swift-only types in Objc"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dHH-wg-oZY" firstAttribute="baseline" secondItem="U3D-ua-T8o" secondAttribute="baseline" id="5dh-du-LWi"/>
+                            <constraint firstItem="Qv2-7P-cwQ" firstAttribute="leading" secondItem="dHH-wg-oZY" secondAttribute="leading" id="Bdk-31-cFh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uvs-zS-Ng0" secondAttribute="trailing" id="FgG-5D-xfq"/>
+                            <constraint firstItem="M5g-ON-qVj" firstAttribute="top" secondItem="ZaN-Op-e3T" secondAttribute="bottom" constant="8" symbolic="YES" id="GeL-c9-2KU"/>
+                            <constraint firstItem="dHH-wg-oZY" firstAttribute="trailing" secondItem="M5g-ON-qVj" secondAttribute="trailing" id="NSg-9m-7Un"/>
+                            <constraint firstItem="ZaN-Op-e3T" firstAttribute="top" secondItem="f3q-bi-TAG" secondAttribute="bottom" constant="8" symbolic="YES" id="P2V-NR-ZNu"/>
+                            <constraint firstItem="Qv2-7P-cwQ" firstAttribute="baseline" secondItem="zre-dc-Hcd" secondAttribute="baseline" id="Shw-nU-NpQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="M5g-ON-qVj" secondAttribute="leading" id="cmM-c7-ZT5"/>
+                            <constraint firstItem="dHH-wg-oZY" firstAttribute="width" secondItem="U3D-ua-T8o" secondAttribute="width" id="igZ-QK-r9e"/>
+                            <constraint firstItem="U3D-ua-T8o" firstAttribute="leading" secondItem="M5g-ON-qVj" secondAttribute="leading" id="l2u-Dy-ljt"/>
+                            <constraint firstItem="zre-dc-Hcd" firstAttribute="leading" secondItem="U3D-ua-T8o" secondAttribute="leading" id="pLQ-aQ-KNc"/>
+                            <constraint firstItem="U3D-ua-T8o" firstAttribute="width" secondItem="M5g-ON-qVj" secondAttribute="width" multiplier="0.4" id="qST-FN-hUI"/>
+                            <constraint firstItem="zre-dc-Hcd" firstAttribute="top" secondItem="M5g-ON-qVj" secondAttribute="bottom" constant="8" symbolic="YES" id="sci-zs-2J8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M5g-ON-qVj" secondAttribute="trailing" id="t2V-Cg-CUZ"/>
+                            <constraint firstItem="ZaN-Op-e3T" firstAttribute="leading" secondItem="M5g-ON-qVj" secondAttribute="leading" id="taB-34-ys5"/>
+                            <constraint firstItem="U3D-ua-T8o" firstAttribute="top" secondItem="zre-dc-Hcd" secondAttribute="bottom" constant="8" id="uMP-55-mDQ"/>
+                            <constraint firstItem="8xE-pv-tOA" firstAttribute="top" secondItem="Uvs-zS-Ng0" secondAttribute="bottom" constant="8" id="zNs-6v-M96"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="B54-ad-dvO"/>
+                    <connections>
+                        <outlet property="leftEnumContainerView" destination="U3D-ua-T8o" id="fLD-KQ-nas"/>
+                        <outlet property="rightEnumContainerView" destination="dHH-wg-oZY" id="h6G-j0-bgI"/>
+                        <outlet property="structContainerView" destination="M5g-ON-qVj" id="jZX-d6-FsS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yl-vH-rg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="-851"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
