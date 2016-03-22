@@ -46,26 +46,25 @@ class IconView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         var allConstraints = [NSLayoutConstraint]()
-        let views = ["view": view]
+        let views = ["view": view, "self":self]
         
         var verticalConstraintString:String?
         var horizontalConstraintString:String?
         
         switch icon! {
         case .Color:
-            verticalConstraintString = "V:|-[view(44)]"
-            horizontalConstraintString = "H:|-[view(44)]"
+            verticalConstraintString = "V:|-[view(44)]-|"
+            horizontalConstraintString = "H:|-[view(44)]-|"
         case .Image:
-            verticalConstraintString = "V:|-[view]"
-            horizontalConstraintString = "H:|-[view]"
+            verticalConstraintString = "V:|-[view]-|"
+            horizontalConstraintString = "H:|-[view]-|"
         }
         
-            let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-                verticalConstraintString!,
-                options: [],
-                metrics: nil,
-                views: views)
-        
+        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
+            verticalConstraintString!,
+            options: [],
+            metrics: nil,
+            views: views)
 
         allConstraints += verticalConstraints
         
