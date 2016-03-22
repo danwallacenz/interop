@@ -24,7 +24,6 @@ class ProfileView: UIView {
         super.init(frame: CGRectZero)
 
         self.backgroundColor = UIColor.yellowColor()
-//        self.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.6)
         
         nameLabel.text = self.user?.name
         self.addSubview(nameLabel)

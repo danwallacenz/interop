@@ -32,6 +32,8 @@ class SwiftEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addProfile()
+        
         addLeftEnum()
         addRightEnum()
 
@@ -87,6 +89,34 @@ class SwiftEntryViewController: UIViewController {
             multiplier: 1,
             constant: 0)
         view.addConstraint(verticalConstraint)
+    }
+    
+    private func addProfile(){
+        
+        let url = NSURLComponents(string:"https://github.com/danwallacenz")?.URL
+        
+        let user = User(name: "Daniel Wallace", profileImageURL: url!)
+//        let user = User(name: "Daniel Wallace", profileImageURL:
+//        NSURL(scheme: "https", host: "github.com", path: "danwallacenz")!)
+        
+        
+        let profileView = ProfileView(user: user)
+        structContainerView.addSubview(profileView)
+        
+        profileView.translatesAutoresizingMaskIntoConstraints = false
+        structContainerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        var allConstraints = [NSLayoutConstraint]()
+        let views = ["profileView" : profileView, "structContainerView" : structContainerView]
+        
+        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-[profileView]-|", options:[] , metrics: nil, views: views)
+        allConstraints += vConstraints
+        
+        let hConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-[profileView]-|", options:[] , metrics: nil, views: views)
+        allConstraints += hConstraints
+        
+        NSLayoutConstraint.activateConstraints(allConstraints)
+        
     }
     
     private func addTuple(){
