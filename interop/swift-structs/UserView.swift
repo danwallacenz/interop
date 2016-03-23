@@ -28,7 +28,7 @@ class ProfileView: UIView {
         nameLabel.text = self.user?.name
         self.addSubview(nameLabel)
         
-        profileImageURLLabel.text = user.profileImageURL.path
+        profileImageURLLabel.text = user.profileImageURL.absoluteString
         self.addSubview(profileImageURLLabel)
         
         layout();
