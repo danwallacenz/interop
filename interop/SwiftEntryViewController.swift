@@ -19,8 +19,10 @@ class SwiftEntryViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     
     
+    // Enum
     let leftIcon = Icon.Color(UIColor(red: 100.0/255.0, green: 20/255.0, blue: 10/255.0, alpha: 1.0))
     
+    // Enum
     var rightIcon: Icon? {
         get {
             if let image = UIImage(named: "ic_motorcycle") {
@@ -30,12 +32,19 @@ class SwiftEntryViewController: UIViewController {
         }
     }
     
+    // Struct
     var user: User {
         get {
             let url = NSURLComponents(string:"https://github.com/danwallacenz")?.URL
             return User(name: "Daniel Wallace", profileImageURL: url!)
         }
     }
+    
+    // Tuples
+
+    let http404Error = (statusCode: 404, description:"Not Found")
+    let http200Status = (statusCode: 200, description: "OK")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +54,7 @@ class SwiftEntryViewController: UIViewController {
         addLeftEnum()
         addRightEnum()
 
-        addTuple()
+        addTuple((http404Error))
     }
 
     func addLeftEnum(){
@@ -100,12 +109,7 @@ class SwiftEntryViewController: UIViewController {
     }
     
     private func addProfile(){
-        
-//        let url = NSURLComponents(string:"https://github.com/danwallacenz")?.URL
-//        
-//        let user = User(name: "Daniel Wallace", profileImageURL: url!)
-        
-        
+
         let profileView = ProfileView(user: user)
         structContainerView.addSubview(profileView)
         
@@ -125,7 +129,10 @@ class SwiftEntryViewController: UIViewController {
         
     }
     
-    private func addTuple(){
+    // note  mandatory label for first parameter
+    private func addTuple(statusCode statusCode: Int, description:String){
+        
+        print("\(statusCode):\(description)")
         
         let tupleView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         tupleView.backgroundColor = UIColor.purpleColor()
