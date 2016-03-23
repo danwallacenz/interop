@@ -18,14 +18,22 @@ class SwiftEntryViewController: UIViewController {
     
     @IBOutlet weak var bottomView: UIView!
     
+    
     let leftIcon = Icon.Color(UIColor(red: 100.0/255.0, green: 20/255.0, blue: 10/255.0, alpha: 1.0))
     
     var rightIcon: Icon? {
-    get {
-        if let image = UIImage(named: "ic_motorcycle") {
-            return Icon.Image(image)
+        get {
+            if let image = UIImage(named: "ic_motorcycle") {
+                return Icon.Image(image)
+            }
+            return nil
         }
-        return nil
+    }
+    
+    var user: User {
+        get {
+            let url = NSURLComponents(string:"https://github.com/danwallacenz")?.URL
+            return User(name: "Daniel Wallace", profileImageURL: url!)
         }
     }
     
@@ -93,11 +101,9 @@ class SwiftEntryViewController: UIViewController {
     
     private func addProfile(){
         
-        let url = NSURLComponents(string:"https://github.com/danwallacenz")?.URL
-        
-        let user = User(name: "Daniel Wallace", profileImageURL: url!)
-//        let user = User(name: "Daniel Wallace", profileImageURL:
-//        NSURL(scheme: "https", host: "github.com", path: "danwallacenz")!)
+//        let url = NSURLComponents(string:"https://github.com/danwallacenz")?.URL
+//        
+//        let user = User(name: "Daniel Wallace", profileImageURL: url!)
         
         
         let profileView = ProfileView(user: user)
