@@ -22,8 +22,6 @@ class ProfileView: UIView {
         
         self.user = user
         super.init(frame: CGRectZero)
-
-        self.backgroundColor = UIColor.yellowColor()
         
         nameLabel.text = self.user?.name
         self.addSubview(nameLabel)
@@ -32,6 +30,9 @@ class ProfileView: UIView {
         self.addSubview(profileImageURLLabel)
         
         layout();
+        
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.lightGrayColor().CGColor
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -48,21 +49,21 @@ class ProfileView: UIView {
         let views = ["nameLabel": nameLabel, "profileImageURLLabel": profileImageURLLabel]
         
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-[nameLabel]-[profileImageURLLabel]-|",
+            "V:|-(20)-[nameLabel]-[profileImageURLLabel]-(20)-|",
             options: [],
             metrics: nil,
             views: views)
         allConstraints += verticalConstraints
         
         let nameLabelHorizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-[nameLabel]",
+            "H:|-(20)-[nameLabel]",
             options: [],
             metrics: nil,
             views: views)
         allConstraints += nameLabelHorizontalConstraints
         
         let profileImageURLLabelHorizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-[profileImageURLLabel]",
+            "H:|-(20)-[profileImageURLLabel]",
             options: [],
             metrics: nil,
             views: views)
@@ -77,8 +78,14 @@ class ProfileView: UIView {
  */
 extension ProfileView {
     
-    @objc convenience init(name:String, profileImageURL:String ){
-        let user = User(name: name, profileImageURL: NSURL(string: profileImageURL)!)
+    @objc convenience init(name:String, profileImageURL:NSURL ){
+        let user = User(name: name, profileImageURL: profileImageURL)
+        self.init(user: user)
+    }
+    
+    //MARK: - Deprecated
+    @objc convenience init(name:String, profileImageURLString:String ){
+        let user = User(name: name, profileImageURL: NSURL(string: profileImageURLString)!)
         self.init(user: user)
     }
 }

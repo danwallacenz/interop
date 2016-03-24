@@ -30,7 +30,7 @@
         = (SwiftStructViewController *)segue.destinationViewController;
         
         if ([segue.identifier isEqualToString:@"showStructVC"]){
-            swiftStructViewController.profileView = [[ProfileView alloc] initWithName:@"Jim" profileImageURL:@"www.stuff.co.nz"];
+            swiftStructViewController.profileView = [[ProfileView alloc] initWithName:@"Jim" profileImageURLString:@"www.stuff.co.nz"];
         }
     }
 }

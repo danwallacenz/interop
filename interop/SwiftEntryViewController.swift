@@ -16,11 +16,9 @@ class SwiftEntryViewController: UIViewController {
     
     @IBOutlet weak var rightEnumContainerView: UIView!
     
-    @IBOutlet weak var bottomView: UIView!
-    
-    
     // Enum
     let leftIcon = Icon.Color(UIColor(red: 100.0/255.0, green: 20/255.0, blue: 10/255.0, alpha: 1.0))
+    
     
     // Enum
     var rightIcon: Icon? {
@@ -32,6 +30,7 @@ class SwiftEntryViewController: UIViewController {
         }
     }
     
+    
     // Struct
     var user: User {
         get {
@@ -40,12 +39,13 @@ class SwiftEntryViewController: UIViewController {
         }
     }
     
+    
     // Tuples
-
     let http404Error = (statusCode: 404, description:"Not Found")
     let http200Status = (statusCode: 200, description: "OK")
 
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,16 +54,48 @@ class SwiftEntryViewController: UIViewController {
         addLeftEnum()
         addRightEnum()
 
-        addTuple((http404Error))
+        title = "Swifty Swift"
+        
+//        Experimental
+//        addTuple((http404Error))
     }
 
-    func addLeftEnum(){
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
+        
+        
+        // Show Swift In ObjC
+        
+        if let objectiveCWithSwiftDataStructuresViewController = segue.destinationViewController as? ObjectiveCWithSwiftDataStructuresViewController {
+            if segue.identifier == "Show Swift In ObjC" {
+                
+//                if let user = profileView?.user {
+//                    legacyStructViewController.user = user
+//                }
+                
+                objectiveCWithSwiftDataStructuresViewController.showProfileForUserWithName(
+                    user.name,
+                    profileImageURL: user.profileImageURL)
+            }
+        }
+        
+    }
+
+    
+    
+    // MARK: - Layout
+    private func addLeftEnum(){
 
         let iconView = IconView(icon: leftIcon)
         layout(iconView: iconView, container: leftEnumContainerView)
     }
     
-    func addRightEnum(){
+    private func addRightEnum(){
         
         if let rightIcon = rightIcon {
             let iconView = IconView(icon: rightIcon)
@@ -72,16 +104,6 @@ class SwiftEntryViewController: UIViewController {
             print("image not found")
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     private func layout(iconView iconView: IconView, container: UIView) {
         
@@ -126,37 +148,21 @@ class SwiftEntryViewController: UIViewController {
         allConstraints += hConstraints
         
         NSLayoutConstraint.activateConstraints(allConstraints)
-        
     }
     
-    // note  mandatory label for first parameter
+    /**
+        Experimental: Note  mandatory label for first parameter.
+             call
+                ```let tuple = (statusCode: 200, description: "OK")
+                addTuple((tuple))```
+            Note the double parentheses.
+     */
     private func addTuple(statusCode statusCode: Int, description:String){
         
         print("\(statusCode):\(description)")
         
-        let tupleView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        tupleView.backgroundColor = UIColor.purpleColor()
-        tupleView.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.addSubview(tupleView)
+        let _ = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         
-        var allConstraints = [NSLayoutConstraint]()
-        let views = ["tupleView" : tupleView, "bottomView" : bottomView]
-        
-        // size
-        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:[tupleView(40)]", options:[] , metrics: nil, views: views)
-        allConstraints += vConstraints
-        let hConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:[tupleView(40)]", options:[] , metrics: nil, views: views)
-        allConstraints += hConstraints
-        
-        NSLayoutConstraint.activateConstraints(allConstraints)
-        
-        // center
-        let xConstraint = NSLayoutConstraint(item: tupleView, attribute: .CenterX, relatedBy: .Equal, toItem: bottomView, attribute: .CenterX, multiplier: 1, constant: 0)
-        let yConstraint = NSLayoutConstraint(item: tupleView, attribute: .CenterY, relatedBy: .Equal, toItem: bottomView, attribute: .CenterY, multiplier: 1, constant: 0)
-        
-        bottomView.addConstraint(xConstraint)
-        bottomView.addConstraint(yConstraint)
     }
 }
 

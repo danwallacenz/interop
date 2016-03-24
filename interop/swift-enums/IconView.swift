@@ -32,6 +32,9 @@ class IconView: UIView {
             imageView.contentMode = .ScaleAspectFill
             layout(imageView)
         }
+        
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.lightGrayColor().CGColor
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -53,8 +56,8 @@ class IconView: UIView {
         
         switch icon! {
         case .Color:
-            verticalConstraintString = "V:|-[view(44)]-|"
-            horizontalConstraintString = "H:|-[view(44)]-|"
+            verticalConstraintString = "V:|-[view(30)]-|"
+            horizontalConstraintString = "H:|-[view(30)]-|"
         case .Image:
             verticalConstraintString = "V:|-[view]-|"
             horizontalConstraintString = "H:|-[view]-|"

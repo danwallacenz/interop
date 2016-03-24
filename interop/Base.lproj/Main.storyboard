@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V5S-zd-72w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="-83"/>
+            <point key="canvasLocation" x="-743" y="-896"/>
         </scene>
         <!--Obj-C VC Setting IconView-->
         <scene sceneID="tne-QT-ifu">
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="269"/>
+            <point key="canvasLocation" x="22" y="-544"/>
         </scene>
         <!--ObjC Struct View Controller-->
         <scene sceneID="vR7-CH-BjP">
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFZ-WN-jQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657" y="-406"/>
+            <point key="canvasLocation" x="1686" y="-1219"/>
         </scene>
         <!--Swift Boxed User View Controller-->
         <scene sceneID="mHS-WR-gD2">
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Fi-3Q-FYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3344" y="-405"/>
+            <point key="canvasLocation" x="2373" y="-1218"/>
         </scene>
         <!--SwiftVC View Controller-->
         <scene sceneID="nyY-hc-Bvz">
@@ -167,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHz-Ia-U77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="269"/>
+            <point key="canvasLocation" x="874" y="-544"/>
         </scene>
         <!--Old Style View Controller-->
         <scene sceneID="EdB-uz-bDE">
@@ -185,12 +185,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvC-Fz-p3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657" y="269"/>
+            <point key="canvasLocation" x="1686" y="-544"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hZp-db-cSJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FI8-YO-NLj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Alt_Entry_Point" automaticallyAdjustsScrollViewInsets="NO" id="FI8-YO-NLj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S7u-0R-hsm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -203,7 +203,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTz-NQ-li2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-472" y="-83"/>
+            <point key="canvasLocation" x="-1443" y="-896"/>
         </scene>
         <!--Swift Struct View Controller-->
         <scene sceneID="Kif-zg-JO0">
@@ -234,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0q-Aa-mgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1805" y="-406"/>
+            <point key="canvasLocation" x="834" y="-1219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tcs-X6-p94">
@@ -252,7 +252,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHh-oo-DJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-253" y="-851"/>
+            <point key="canvasLocation" x="-1224" y="-1664"/>
         </scene>
         <!--Swift Entry View Controller-->
         <scene sceneID="pe1-5n-nJj">
@@ -267,85 +267,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-ON-qVj" userLabel="Struct View">
-                                <rect key="frame" x="20" y="100.5" width="560" height="100"/>
-                                <color key="backgroundColor" red="0.67512542606361303" green="0.62963337160845168" blue="0.99342542886734009" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="112" width="560" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="rqT-fD-MJW"/>
+                                    <constraint firstAttribute="height" constant="100" id="axv-tc-Zr4"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-wg-oZY" userLabel="Right View">
-                                <rect key="frame" x="530" y="237" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.99342542889999996" green="0.6686381656" blue="0.54330761110000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Struct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-Op-e3T">
-                                <rect key="frame" x="20" y="72" width="62.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Struct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-Op-e3T">
+                                <rect key="frame" x="20" y="72" width="158" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Enum (value 1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zre-dc-Hcd">
-                                <rect key="frame" x="20" y="208.5" width="170" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="20" y="220" width="258" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Enum (value 2)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-7P-cwQ">
-                                <rect key="frame" x="408" y="208.5" width="172" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="319" width="262" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvs-zS-Ng0">
-                                <rect key="frame" x="362" y="562" width="218" height="30"/>
-                                <state key="normal" title="Display Swift-only types in Objc"/>
+                                <rect key="frame" x="360" y="562" width="220" height="30"/>
+                                <state key="normal" title="Display Swift-only types in ObjC"/>
+                                <connections>
+                                    <segue destination="kbF-k9-G65" kind="show" identifier="Show Swift In ObjC" id="dy0-Fp-5Sh"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ne9-xt-3T6">
-                                <rect key="frame" x="20" y="295" width="560" height="259"/>
-                                <color key="backgroundColor" red="1" green="0.71941064969851642" blue="0.75230286259648427" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3D-ua-T8o" userLabel="Left Enum View">
-                                <rect key="frame" x="20" y="237" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.99342542886734009" green="0.66863816559757672" blue="0.54330761106091308" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="261" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="U3D-ua-T8o" secondAttribute="height" multiplier="1:1" id="m6n-8n-6YD"/>
                                     <constraint firstAttribute="height" constant="50" id="xj3-F3-P0i"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-wg-oZY" userLabel="Right View">
+                                <rect key="frame" x="20" y="359" width="50" height="50"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dHH-wg-oZY" firstAttribute="baseline" secondItem="U3D-ua-T8o" secondAttribute="baseline" id="5dh-du-LWi"/>
-                            <constraint firstItem="Ne9-xt-3T6" firstAttribute="top" secondItem="U3D-ua-T8o" secondAttribute="bottom" constant="8" symbolic="YES" id="8h2-7b-L7Q"/>
-                            <constraint firstItem="dHH-wg-oZY" firstAttribute="height" secondItem="U3D-ua-T8o" secondAttribute="height" id="AMK-cF-Djj"/>
-                            <constraint firstItem="Qv2-7P-cwQ" firstAttribute="leading" secondItem="dHH-wg-oZY" secondAttribute="leading" id="Bdk-31-cFh"/>
+                            <constraint firstItem="dHH-wg-oZY" firstAttribute="top" secondItem="Qv2-7P-cwQ" secondAttribute="bottom" constant="8" symbolic="YES" id="0Be-t5-Uv6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uvs-zS-Ng0" secondAttribute="trailing" id="FgG-5D-xfq"/>
+                            <constraint firstItem="Qv2-7P-cwQ" firstAttribute="leading" secondItem="U3D-ua-T8o" secondAttribute="leading" id="GPO-Ec-HgH"/>
                             <constraint firstItem="M5g-ON-qVj" firstAttribute="top" secondItem="ZaN-Op-e3T" secondAttribute="bottom" constant="8" symbolic="YES" id="GeL-c9-2KU"/>
-                            <constraint firstItem="dHH-wg-oZY" firstAttribute="trailing" secondItem="M5g-ON-qVj" secondAttribute="trailing" id="NSg-9m-7Un"/>
+                            <constraint firstItem="dHH-wg-oZY" firstAttribute="width" secondItem="U3D-ua-T8o" secondAttribute="width" id="O0F-Bv-1DB"/>
                             <constraint firstItem="ZaN-Op-e3T" firstAttribute="top" secondItem="f3q-bi-TAG" secondAttribute="bottom" constant="8" symbolic="YES" id="P2V-NR-ZNu"/>
-                            <constraint firstItem="Ne9-xt-3T6" firstAttribute="leading" secondItem="Wjt-O6-rwX" secondAttribute="leadingMargin" id="P8Q-Il-x9x"/>
-                            <constraint firstItem="Qv2-7P-cwQ" firstAttribute="baseline" secondItem="zre-dc-Hcd" secondAttribute="baseline" id="Shw-nU-NpQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ne9-xt-3T6" secondAttribute="trailing" id="bGs-PR-BK4"/>
+                            <constraint firstItem="Qv2-7P-cwQ" firstAttribute="leading" secondItem="dHH-wg-oZY" secondAttribute="leading" id="Yn0-wM-A2W"/>
                             <constraint firstAttribute="leadingMargin" secondItem="M5g-ON-qVj" secondAttribute="leading" id="cmM-c7-ZT5"/>
-                            <constraint firstItem="dHH-wg-oZY" firstAttribute="trailing" secondItem="Qv2-7P-cwQ" secondAttribute="trailing" id="d2y-h2-7Xc"/>
-                            <constraint firstItem="dHH-wg-oZY" firstAttribute="width" secondItem="U3D-ua-T8o" secondAttribute="width" id="igZ-QK-r9e"/>
                             <constraint firstItem="U3D-ua-T8o" firstAttribute="leading" secondItem="M5g-ON-qVj" secondAttribute="leading" id="l2u-Dy-ljt"/>
                             <constraint firstItem="zre-dc-Hcd" firstAttribute="leading" secondItem="U3D-ua-T8o" secondAttribute="leading" id="pLQ-aQ-KNc"/>
                             <constraint firstItem="zre-dc-Hcd" firstAttribute="top" secondItem="M5g-ON-qVj" secondAttribute="bottom" constant="8" symbolic="YES" id="sci-zs-2J8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M5g-ON-qVj" secondAttribute="trailing" id="t2V-Cg-CUZ"/>
                             <constraint firstItem="ZaN-Op-e3T" firstAttribute="leading" secondItem="M5g-ON-qVj" secondAttribute="leading" id="taB-34-ys5"/>
                             <constraint firstItem="U3D-ua-T8o" firstAttribute="top" secondItem="zre-dc-Hcd" secondAttribute="bottom" constant="8" symbolic="YES" id="uMP-55-mDQ"/>
-                            <constraint firstItem="Uvs-zS-Ng0" firstAttribute="top" secondItem="Ne9-xt-3T6" secondAttribute="bottom" constant="8" symbolic="YES" id="vjV-bP-exa"/>
+                            <constraint firstItem="dHH-wg-oZY" firstAttribute="height" secondItem="U3D-ua-T8o" secondAttribute="height" id="wiI-02-vn9"/>
+                            <constraint firstItem="Qv2-7P-cwQ" firstAttribute="top" secondItem="U3D-ua-T8o" secondAttribute="bottom" constant="8" symbolic="YES" id="wkV-1d-PDF"/>
                             <constraint firstItem="8xE-pv-tOA" firstAttribute="top" secondItem="Uvs-zS-Ng0" secondAttribute="bottom" constant="8" id="zNs-6v-M96"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Bdk-31-cFh"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="B54-ad-dvO"/>
                     <connections>
-                        <outlet property="bottomView" destination="Ne9-xt-3T6" id="4yy-0C-Zol"/>
                         <outlet property="leftEnumContainerView" destination="U3D-ua-T8o" id="fLD-KQ-nas"/>
                         <outlet property="rightEnumContainerView" destination="dHH-wg-oZY" id="h6G-j0-bgI"/>
                         <outlet property="structContainerView" destination="M5g-ON-qVj" id="jZX-d6-FsS"/>
@@ -353,7 +337,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yl-vH-rg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="-851"/>
+            <point key="canvasLocation" x="-519" y="-1664"/>
+        </scene>
+        <!--ObjectiveC With Swift Data Structures View Controller-->
+        <scene sceneID="iwT-32-oJA">
+            <objects>
+                <viewController id="kbF-k9-G65" customClass="ObjectiveCWithSwiftDataStructuresViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GQx-VI-BaM"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTi-iP-mQJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8l9-bP-hQD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjS-ZK-nJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="-1661"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

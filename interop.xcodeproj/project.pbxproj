@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C09C6101C952FA20098BC39 /* MainObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09C60F1C952FA20098BC39 /* MainObjCViewController.m */; };
 		3CBC6FEA1C96874C00C33716 /* SwiftBoxedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC6FE91C96874C00C33716 /* SwiftBoxedUserViewController.swift */; };
+		CB21DC471CA381F900B07662 /* ObjectiveCWithSwiftDataStructuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB21DC461CA381F900B07662 /* ObjectiveCWithSwiftDataStructuresViewController.m */; };
 		CB748B0F1C92657B0099D67C /* OldStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB748B0E1C92657B0099D67C /* OldStyleViewController.m */; };
 		CB748B121C92833F0099D67C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB748B111C92833F0099D67C /* Box.swift */; };
 		CB748B1A1C92BDD10099D67C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB748B191C92BDD10099D67C /* UserView.swift */; };
@@ -43,6 +44,8 @@
 		3C09C60E1C952FA20098BC39 /* MainObjCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainObjCViewController.h; sourceTree = "<group>"; };
 		3C09C60F1C952FA20098BC39 /* MainObjCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainObjCViewController.m; sourceTree = "<group>"; };
 		3CBC6FE91C96874C00C33716 /* SwiftBoxedUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftBoxedUserViewController.swift; path = "swift-structs/SwiftBoxedUserViewController.swift"; sourceTree = "<group>"; };
+		CB21DC451CA381F900B07662 /* ObjectiveCWithSwiftDataStructuresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCWithSwiftDataStructuresViewController.h; sourceTree = "<group>"; };
+		CB21DC461CA381F900B07662 /* ObjectiveCWithSwiftDataStructuresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCWithSwiftDataStructuresViewController.m; sourceTree = "<group>"; };
 		CB748B0D1C92657B0099D67C /* OldStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OldStyleViewController.h; path = "swift-enums/OldStyleViewController.h"; sourceTree = "<group>"; };
 		CB748B0E1C92657B0099D67C /* OldStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OldStyleViewController.m; path = "swift-enums/OldStyleViewController.m"; sourceTree = "<group>"; };
 		CB748B111C92833F0099D67C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Box.swift; path = "swift-enums/Box.swift"; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 			children = (
 				CBB4A4541C9224F600D81D95 /* Main.storyboard */,
 				CBF251F21C9CD6750008108F /* SwiftEntryViewController.swift */,
+				CB21DC451CA381F900B07662 /* ObjectiveCWithSwiftDataStructuresViewController.h */,
+				CB21DC461CA381F900B07662 /* ObjectiveCWithSwiftDataStructuresViewController.m */,
 				3C09C60E1C952FA20098BC39 /* MainObjCViewController.h */,
 				3C09C60F1C952FA20098BC39 /* MainObjCViewController.m */,
 				CB748B111C92833F0099D67C /* Box.swift */,
@@ -288,6 +293,7 @@
 				CB748B0F1C92657B0099D67C /* OldStyleViewController.m in Sources */,
 				CB7D153A1C966C5900898CC7 /* BoxedUserReceiver.swift in Sources */,
 				CBB4A4721C92252500D81D95 /* IconView.swift in Sources */,
+				CB21DC471CA381F900B07662 /* ObjectiveCWithSwiftDataStructuresViewController.m in Sources */,
 				CBB4A44D1C9224F600D81D95 /* main.m in Sources */,
 				CBF251F31C9CD6750008108F /* SwiftEntryViewController.swift in Sources */,
 				3C09C6101C952FA20098BC39 /* MainObjCViewController.m in Sources */,

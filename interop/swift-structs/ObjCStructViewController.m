@@ -50,7 +50,7 @@
  an example of creating a view in Objective-C which contains a Swift struct
 */
 -(void)showProfileForUserWithName:(NSString *)name profileImageURL: (NSURL *)url {
-    self.profileView = [[ProfileView alloc] initWithName:name profileImageURL: url.path];
+    self.profileView = [[ProfileView alloc] initWithName:name profileImageURLString: url.absoluteString];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
