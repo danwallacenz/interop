@@ -367,15 +367,12 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoU-f8-fUw" userLabel="Top Struct View">
                                 <rect key="frame" x="20" y="72" width="560" height="96"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2Y-W1-dRc" userLabel="Top Color Enum View">
                                 <rect key="frame" x="20" y="176" width="252" height="96"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAg-FU-TOL" userLabel="Top Image Enum View">
                                 <rect key="frame" x="328" y="176" width="252" height="96"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JH-PP-Dtl" userLabel="Bottom Color Enum View">
                                 <rect key="frame" x="20" y="384" width="252" height="96"/>

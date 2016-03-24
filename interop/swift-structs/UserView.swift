@@ -49,21 +49,21 @@ class ProfileView: UIView {
         let views = ["nameLabel": nameLabel, "profileImageURLLabel": profileImageURLLabel]
         
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-(20)-[nameLabel]-[profileImageURLLabel]-(20)-|",
+            "V:|-[nameLabel]-[profileImageURLLabel]-|",
             options: [],
             metrics: nil,
             views: views)
         allConstraints += verticalConstraints
         
         let nameLabelHorizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-(20)-[nameLabel]",
+            "H:|-[nameLabel]",
             options: [],
             metrics: nil,
             views: views)
         allConstraints += nameLabelHorizontalConstraints
         
         let profileImageURLLabelHorizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-(20)-[profileImageURLLabel]",
+            "H:|-[profileImageURLLabel]",
             options: [],
             metrics: nil,
             views: views)

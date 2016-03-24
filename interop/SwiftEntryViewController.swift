@@ -63,12 +63,8 @@ class SwiftEntryViewController: UIViewController {
     
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-        
-        
+ 
         // Show Swift In ObjC
         
         if let objectiveCWithSwiftDataStructuresViewController = segue.destinationViewController as? ObjectiveCWithSwiftDataStructuresViewController {
@@ -80,7 +76,6 @@ class SwiftEntryViewController: UIViewController {
                     objectiveCWithSwiftDataStructuresViewController.icon2 = rightIcon
                 }
                 
-                // Order is important - otherwise autolayout can't find views to layout against.
                 objectiveCWithSwiftDataStructuresViewController.showProfileForUserWithName(
                     user.name,
                     profileImageURL: user.profileImageURL)
@@ -148,7 +143,7 @@ class SwiftEntryViewController: UIViewController {
         var allConstraints = [NSLayoutConstraint]()
         let views = ["profileView" : profileView, "structContainerView" : structContainerView]
         
-        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-[profileView]-|", options:[] , metrics: nil, views: views)
+        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-[profileView]", options:[] , metrics: nil, views: views)
         allConstraints += vConstraints
         
         let hConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-[profileView]-|", options:[] , metrics: nil, views: views)

@@ -35,9 +35,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setTitle:@"Swift Types in Objective-C"];
+    
     [self layoutTopProfileView];
     [self layoutTopIconViewWithColor];
     [self layoutTopIconViewWithImage];
+    
+    [self.topStructView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.topStructView.layer setBorderWidth:1];
+    [self.topColorEnumView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.topColorEnumView.layer setBorderWidth:1];
+    [self.topImageEnumView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.topImageEnumView.layer setBorderWidth:1];
 }
 
 
@@ -88,7 +97,7 @@
         
         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[profileView]-|" options: 0 metrics:nil views:views]];
 
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[profileView]-|" options:0 metrics:nil views:views]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[profileView]" options:0 metrics:nil views:views]];
     }
 }
 
@@ -96,34 +105,41 @@
     
     if (self.colorIconView && self.topColorEnumView){
         
-        [self.colorIconView setTranslatesAutoresizingMaskIntoConstraints:false];
-        [self.topColorEnumView setTranslatesAutoresizingMaskIntoConstraints:false];
-        
-        [self.topColorEnumView addSubview: self.colorIconView];
-
-        NSDictionary *views = @{ @"colorIconView" : self.colorIconView };
-        
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[colorIconView]-|" options: 0 metrics:nil views:views]];
-        
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[colorIconView]-|" options:0 metrics:nil views:views]];
+        [self layoutIconView:self.colorIconView in: self.topColorEnumView];
     }
+}
+
+-(void) layoutIconView: (IconView *)iconView in: (UIView *)container {
+    
+    [iconView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [container setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [container addSubview:iconView];
+    
+    NSLayoutConstraint *horizontalConstraint = [NSLayoutConstraint constraintWithItem:container
+                                                                            attribute:NSLayoutAttributeCenterX
+                                                                            relatedBy:NSLayoutRelationEqual
+                                                                               toItem:iconView
+                                                                            attribute:NSLayoutAttributeCenterX
+                                                                           multiplier:1
+                                                                             constant:0];
+    [container addConstraint:horizontalConstraint];
+    
+    NSLayoutConstraint *verticalConstraint = [NSLayoutConstraint constraintWithItem:container
+                                                                            attribute:NSLayoutAttributeCenterY
+                                                                            relatedBy:NSLayoutRelationEqual
+                                                                               toItem:iconView
+                                                                            attribute:NSLayoutAttributeCenterY
+                                                                           multiplier:1
+                                                                             constant:0];
+    [container addConstraint:verticalConstraint];
 }
 
 -(void) layoutTopIconViewWithImage {
     
     if (self.imageIconView && self.topImageEnumView){
         
-        [self.imageIconView setTranslatesAutoresizingMaskIntoConstraints:false];
-        
-        [self.topImageEnumView setTranslatesAutoresizingMaskIntoConstraints:false];
-        
-        [self.topImageEnumView addSubview: self.imageIconView];
-        
-        NSDictionary *views = @{ @"imageIconView" : self.imageIconView };
-        
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[imageIconView]-|" options: 0 metrics:nil views:views]];
-        
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[imageIconView]-|" options:0 metrics:nil views:views]];
+        [self layoutIconView:self.imageIconView in: self.topImageEnumView];
     }
 }
 
