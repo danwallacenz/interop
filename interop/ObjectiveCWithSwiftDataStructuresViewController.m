@@ -19,7 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    if (self._user){
+        NSLog(@"self._user = %@", self._user);
+    }
+    if (self._icon1){
+        NSLog(@"self._icon1 = %@", self._icon1);
+    }
+    if (self._icon2){
+        NSLog(@"self._icon2 = %@", self._icon2);
+    }
 }
 
 
@@ -29,6 +38,9 @@
 -(void)showProfileForUserWithName:(NSString *)name profileImageURL: (NSURL *)url {
     
     self.profileView = [[ProfileView alloc] initWithName:name profileImageURL: url];
+    
+    [self.profileView setTranslatesAutoresizingMaskIntoConstraints:false];
+    
     [self.view addSubview: self.profileView];
     
     id topLayoutGuide = self.topLayoutGuide;
@@ -38,7 +50,7 @@
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(50)-[myProfileView]-(50)-|" options: 0 metrics:nil views:views]];
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[topLayoutGuide]-[myProfileView]" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide]-[myProfileView]" options:0 metrics:nil views:views]];
 }
 
 - (void)didReceiveMemoryWarning {

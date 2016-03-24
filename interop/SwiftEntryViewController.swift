@@ -74,19 +74,19 @@ class SwiftEntryViewController: UIViewController {
         if let objectiveCWithSwiftDataStructuresViewController = segue.destinationViewController as? ObjectiveCWithSwiftDataStructuresViewController {
             if segue.identifier == "Show Swift In ObjC" {
                 
-//                if let user = profileView?.user {
-//                    legacyStructViewController.user = user
-//                }
+                objectiveCWithSwiftDataStructuresViewController.user = user
+                objectiveCWithSwiftDataStructuresViewController.icon1 = leftIcon
+                if let rightIcon = rightIcon {
+                    objectiveCWithSwiftDataStructuresViewController.icon2 = rightIcon
+                }
                 
                 objectiveCWithSwiftDataStructuresViewController.showProfileForUserWithName(
                     user.name,
                     profileImageURL: user.profileImageURL)
             }
         }
-        
     }
 
-    
     
     // MARK: - Layout
     private func addLeftEnum(){
