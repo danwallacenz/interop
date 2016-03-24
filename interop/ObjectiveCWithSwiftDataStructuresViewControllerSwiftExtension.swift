@@ -37,4 +37,16 @@ extension ObjectiveCWithSwiftDataStructuresViewController {
             _icon2 = Box(newValue)
         }
     }
+    
+    /**
+     a shim to allow passing a Swift enum to an Objective-C class
+     */
+    func showIconViewWithIcon(icon: Icon) {
+        switch icon {
+        case let .Image(image):
+            self.showIconViewWithImage(image)
+        case let .Color(color):
+            self.showIconViewWithColor(color)
+        }
+    }
 }

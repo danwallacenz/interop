@@ -80,9 +80,16 @@ class SwiftEntryViewController: UIViewController {
                     objectiveCWithSwiftDataStructuresViewController.icon2 = rightIcon
                 }
                 
+                // Order is important - otherwise autolayout can't find views to layout against.
                 objectiveCWithSwiftDataStructuresViewController.showProfileForUserWithName(
                     user.name,
                     profileImageURL: user.profileImageURL)
+
+                if let rightIcon = rightIcon {
+                    objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(rightIcon)
+                }
+                
+                objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(leftIcon)
             }
         }
     }

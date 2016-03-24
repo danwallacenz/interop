@@ -83,7 +83,7 @@ class IconView: UIView {
 }
 
 /**
- shims for initializing a Swift enun from Obj-C
+ shims for initializing a Swift enum from Obj-C
 */
 extension IconView {
     
