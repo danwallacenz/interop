@@ -26,6 +26,8 @@ class ProfileView: UIView {
         if let myUser = self.user {
             layoutWithUser(myUser)
         }
+        
+        backgroundColor = UIColor.whiteColor()
     }
 
     required init?(coder aDecoder: NSCoder) {

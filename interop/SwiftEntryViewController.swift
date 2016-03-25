@@ -10,6 +10,9 @@ import UIKit
 
 class SwiftEntryViewController: UIViewController {
     
+    let CONTAINER_BORDER_WIDTH:CGFloat = 1.0
+    let CONTAINER_BORDER_COLOR = UIColor.lightGrayColor().colorWithAlphaComponent(0.4).CGColor
+    
     @IBOutlet weak var structContainerView: UIView!
     
     @IBOutlet weak var leftEnumContainerView: UIView!
@@ -17,11 +20,11 @@ class SwiftEntryViewController: UIViewController {
     @IBOutlet weak var rightEnumContainerView: UIView!
     
     // Enum
-    let leftIcon = Icon.Color(UIColor(red: 100.0/255.0, green: 20/255.0, blue: 10/255.0, alpha: 1.0))
+    let colorIcon = Icon.Color(UIColor(red: 100.0/255.0, green: 20/255.0, blue: 10/255.0, alpha: 1.0))
     
     
     // Enum
-    var rightIcon: Icon? {
+    var imageIcon: Icon? {
         get {
             if let image = UIImage(named: "ic_motorcycle") {
                 return Icon.Image(image)
@@ -51,10 +54,17 @@ class SwiftEntryViewController: UIViewController {
         
         addProfile()
         
-        addLeftEnum()
-        addRightEnum()
+        addColorEnum()
+        addImageEnum()
 
         title = "Swifty Swift"
+        
+        structContainerView.layer.borderColor = CONTAINER_BORDER_COLOR
+        structContainerView.layer.borderWidth = CONTAINER_BORDER_WIDTH
+        leftEnumContainerView.layer.borderColor = CONTAINER_BORDER_COLOR
+        leftEnumContainerView.layer.borderWidth = CONTAINER_BORDER_WIDTH
+        rightEnumContainerView.layer.borderColor = CONTAINER_BORDER_COLOR
+        rightEnumContainerView.layer.borderWidth = CONTAINER_BORDER_WIDTH
         
 //        Experimental
 //        addTuple((http404Error))
@@ -76,21 +86,21 @@ class SwiftEntryViewController: UIViewController {
                     objectiveCWithSwiftDataStructuresViewController.user = boxedUser
                 }
                 
-                objectiveCWithSwiftDataStructuresViewController.icon1 = leftIcon
+                let boxedColorIcon = Icon.Color(UIColor(red: 10.0/255.0, green: 150/255.0, blue: 150/255.0, alpha: 1.0))
+                objectiveCWithSwiftDataStructuresViewController.icon1 = boxedColorIcon
                 
-                if let rightIcon = rightIcon {
-                    objectiveCWithSwiftDataStructuresViewController.icon2 = rightIcon
+                if let image = UIImage(named: "ic_music_video") {
+                    objectiveCWithSwiftDataStructuresViewController.icon2 = Icon.Image(image)
                 }
-                
                 
                 // Call shims on receiver
                 objectiveCWithSwiftDataStructuresViewController.showProfileViewWithUser(user)
                 
-                if let rightIcon = rightIcon {
-                    objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(rightIcon)
+                if let imageIcon = imageIcon {
+                    objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(imageIcon)
                 }
                 
-                objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(leftIcon)
+                objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(colorIcon)
                 
                 
                 // Send 'external' views wrapping Swift-only types to receiver
@@ -132,16 +142,16 @@ class SwiftEntryViewController: UIViewController {
     }
     
     // MARK: - Layout
-    private func addLeftEnum(){
+    private func addColorEnum(){
 
-        let iconView = IconView(icon: leftIcon)
+        let iconView = IconView(icon: colorIcon)
         layout(iconView: iconView, container: leftEnumContainerView)
     }
     
-    private func addRightEnum(){
+    private func addImageEnum(){
         
-        if let rightIcon = rightIcon {
-            let iconView = IconView(icon: rightIcon)
+        if let imageIcon = imageIcon {
+            let iconView = IconView(icon: imageIcon)
             layout(iconView: iconView, container: rightEnumContainerView)
         } else {
             print("image not found")

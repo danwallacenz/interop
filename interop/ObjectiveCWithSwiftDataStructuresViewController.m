@@ -49,30 +49,6 @@
     [self layoutTopIconViewWithColorIfPossible];
     [self layoutTopIconViewWithImageIfPossible];
     
-    // Borders
-    int CONTAINER_BORDER_WIDTH = 1;
-    CGColorRef CONTAINER_BORDER_COLOR = [[UIColor lightGrayColor] colorWithAlphaComponent:0.4].CGColor;
-    [self.topStructView.layer setBorderColor:CONTAINER_BORDER_COLOR];
-    [self.topStructView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
-    
-    [self.topColorEnumView.layer setBorderColor:CONTAINER_BORDER_COLOR];
-    [self.topColorEnumView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
-    
-    [self.topImageEnumView.layer setBorderColor:CONTAINER_BORDER_COLOR];
-    [self.topImageEnumView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
-    
-    [self.bottomStructView.layer setBorderColor:CONTAINER_BORDER_COLOR];
-    [self.bottomStructView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
-    
-    [self.bottomColorEnumView.layer setBorderColor:CONTAINER_BORDER_COLOR];
-    [self.bottomColorEnumView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
-    
-    [self.bottomImageEnumView.layer setBorderColor:CONTAINER_BORDER_COLOR];
-    [self.bottomImageEnumView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
-    
-    [self.boxedSwiftTypesLabelsContainer.layer setBorderColor:CONTAINER_BORDER_COLOR];
-    [self.boxedSwiftTypesLabelsContainer.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
-    
     // Boxed labels
     [self.boxedSwiftStructLabel setText: [NSString stringWithFormat:@"self._user = %@", self._user]];
     [self.boxedSwiftEnumOneLabel setText: [NSString stringWithFormat:@"self._icon1 = %@", self._icon1]];
@@ -82,6 +58,7 @@
     [self layoutExternalColorIconViewIfPossible];
     [self layoutExternalImageIconViewIfPossible];
     
+    [self addBorders];
 }
 
 -(void) layoutExternalProfileViewIfPossible {
@@ -163,7 +140,7 @@
         
         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[profileView]-|" options: 0 metrics:nil views:views]];
 
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[profileView]" options:0 metrics:nil views:views]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[profileView]" options:0 metrics:nil views:views]];
     }
 }
 
@@ -216,23 +193,42 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-//    if (self._user){
-//        NSLog(@"self._user = %@", self._user);
-//    }
-//    if (self._icon1){
-//        NSLog(@"self._icon1 = %@", self._icon1);
-//    }
-//    if (self._icon2){
-//        NSLog(@"self._icon2 = %@", self._icon2);
-//    }
-    
     if ([segue.destinationViewController isKindOfClass:[SwiftBoxedTypesAcceptingViewController class]]){
         
         SwiftBoxedTypesAcceptingViewController *swiftBoxedTypesAcceptingViewController
             = (SwiftBoxedTypesAcceptingViewController *)segue.destinationViewController;
         
         [swiftBoxedTypesAcceptingViewController setUser:self._user];
+        [swiftBoxedTypesAcceptingViewController setColorIcon:self._icon1];
+        [swiftBoxedTypesAcceptingViewController setImageIcon:self._icon2];
     }
 }
+
+-(void)addBorders {
+
+    int CONTAINER_BORDER_WIDTH = 1;
+    CGColorRef CONTAINER_BORDER_COLOR = [[UIColor lightGrayColor] colorWithAlphaComponent:0.4].CGColor;
+    [self.topStructView.layer setBorderColor:CONTAINER_BORDER_COLOR];
+    [self.topStructView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
+    
+    [self.topColorEnumView.layer setBorderColor:CONTAINER_BORDER_COLOR];
+    [self.topColorEnumView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
+    
+    [self.topImageEnumView.layer setBorderColor:CONTAINER_BORDER_COLOR];
+    [self.topImageEnumView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
+    
+    [self.bottomStructView.layer setBorderColor:CONTAINER_BORDER_COLOR];
+    [self.bottomStructView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
+    
+    [self.bottomColorEnumView.layer setBorderColor:CONTAINER_BORDER_COLOR];
+    [self.bottomColorEnumView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
+    
+    [self.bottomImageEnumView.layer setBorderColor:CONTAINER_BORDER_COLOR];
+    [self.bottomImageEnumView.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
+    
+    [self.boxedSwiftTypesLabelsContainer.layer setBorderColor:CONTAINER_BORDER_COLOR];
+    [self.boxedSwiftTypesLabelsContainer.layer setBorderWidth:CONTAINER_BORDER_WIDTH];
+}
+
 
 @end

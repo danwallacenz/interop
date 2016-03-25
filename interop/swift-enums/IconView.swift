@@ -35,10 +35,29 @@ class IconView: UIView {
         
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGrayColor().CGColor
+        backgroundColor = UIColor.whiteColor()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func setIcon(icon: Icon){
+        self.icon = icon
+        
+        switch icon {
+        case let .Color(color):
+            let colorView = UIView()
+            colorView.backgroundColor = color
+            layout(colorView)
+        case let .Image(image):
+            let imageView = UIImageView(image: image)
+            imageView.contentMode = .ScaleAspectFill
+            layout(imageView)
+        }
+        
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.lightGrayColor().CGColor
     }
     
     private func layout(view: UIView){
