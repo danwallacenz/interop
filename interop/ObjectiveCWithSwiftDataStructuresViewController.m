@@ -11,20 +11,28 @@
 
 @interface ObjectiveCWithSwiftDataStructuresViewController ()
 
-@property (strong,nonatomic) ProfileView *profileView;
 
+#pragma mark - Internal views containing Swift-only types.
+@property (strong,nonatomic) ProfileView *profileView;
 @property (strong,nonatomic) IconView *colorIconView;
 @property (strong,nonatomic) IconView *imageIconView;
 
 
-#pragma mark - Layout container views
+#pragma mark - Boxed<Swift-only-type> labels.
+@property (weak, nonatomic) IBOutlet UILabel *boxedSwiftStructLabel;
+@property (weak, nonatomic) IBOutlet UILabel *boxedSwiftEnumOneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *boxedSwiftEnumTwoLabe;
 
+
+#pragma mark - Layout container views.
 @property (weak, nonatomic) IBOutlet UIView *topStructView;
 @property (weak, nonatomic) IBOutlet UIView *topColorEnumView;
 @property (weak, nonatomic) IBOutlet UIView *topImageEnumView;
 @property (weak, nonatomic) IBOutlet UIView *bottomStructView;
 @property (weak, nonatomic) IBOutlet UIView *bottomColorEnumView;
 @property (weak, nonatomic) IBOutlet UIView *bottomImageEnumView;
+@property (weak, nonatomic) IBOutlet UIView *boxedSwiftTypesLabelsContainer;
+
 
 @end
 
@@ -47,6 +55,13 @@
     [self.topColorEnumView.layer setBorderWidth:1];
     [self.topImageEnumView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     [self.topImageEnumView.layer setBorderWidth:1];
+    
+    [self.boxedSwiftTypesLabelsContainer.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.boxedSwiftTypesLabelsContainer.layer setBorderWidth:1];
+    
+    [self.boxedSwiftStructLabel setText: [NSString stringWithFormat:@"self._user = %@", self._user]];
+    [self.boxedSwiftEnumOneLabel setText: [NSString stringWithFormat:@"self._icon1 = %@", self._icon1]];
+    [self.boxedSwiftEnumTwoLabe setText: [NSString stringWithFormat:@"self._icon2 = %@", self._icon2]];
 }
 
 
