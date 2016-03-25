@@ -216,14 +216,22 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    if (self._user){
-        NSLog(@"self._user = %@", self._user);
-    }
-    if (self._icon1){
-        NSLog(@"self._icon1 = %@", self._icon1);
-    }
-    if (self._icon2){
-        NSLog(@"self._icon2 = %@", self._icon2);
+//    if (self._user){
+//        NSLog(@"self._user = %@", self._user);
+//    }
+//    if (self._icon1){
+//        NSLog(@"self._icon1 = %@", self._icon1);
+//    }
+//    if (self._icon2){
+//        NSLog(@"self._icon2 = %@", self._icon2);
+//    }
+    
+    if ([segue.destinationViewController isKindOfClass:[SwiftBoxedTypesAcceptingViewController class]]){
+        
+        SwiftBoxedTypesAcceptingViewController *swiftBoxedTypesAcceptingViewController
+            = (SwiftBoxedTypesAcceptingViewController *)segue.destinationViewController;
+        
+        [swiftBoxedTypesAcceptingViewController setUser:self._user];
     }
 }
 

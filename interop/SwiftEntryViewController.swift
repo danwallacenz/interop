@@ -71,7 +71,10 @@ class SwiftEntryViewController: UIViewController {
             if segue.identifier == "Show Swift In ObjC" {
                 
                 // Send Boxed Swift-only types to receiver
-                objectiveCWithSwiftDataStructuresViewController.user = user
+                if let url = NSURLComponents(string:"https://addyosmani.com")?.URL {
+                    let boxedUser = User(name: "Addy Osmani", profileImageURL: url)
+                    objectiveCWithSwiftDataStructuresViewController.user = boxedUser
+                }
                 
                 objectiveCWithSwiftDataStructuresViewController.icon1 = leftIcon
                 

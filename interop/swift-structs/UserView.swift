@@ -23,7 +23,26 @@ class ProfileView: UIView {
         self.user = user
         super.init(frame: CGRectZero)
         
-        nameLabel.text = self.user?.name
+        if let myUser = self.user {
+            layoutWithUser(myUser)
+        }
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
+    func setUser(user: User){
+        self.user = user
+        
+        if let myUser = self.user {
+            layoutWithUser(myUser)
+        }
+    }
+    
+    private func layoutWithUser(user: User){
+        
+        nameLabel.text = user.name
         self.addSubview(nameLabel)
         
         profileImageURLLabel.text = user.profileImageURL.absoluteString
@@ -33,10 +52,6 @@ class ProfileView: UIView {
         
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGrayColor().CGColor
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
     private func layout(){
