@@ -285,7 +285,7 @@
                                 <rect key="frame" x="20" y="72" width="560" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Struct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-Op-e3T">
-                                        <rect key="frame" x="20" y="69" width="73" height="13"/>
+                                        <rect key="frame" x="20" y="68" width="73" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -301,7 +301,7 @@
                                 <rect key="frame" x="20" y="170" width="180" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Enum (value 1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zre-dc-Hcd">
-                                        <rect key="frame" x="8" y="69" width="117" height="13"/>
+                                        <rect key="frame" x="8" y="68" width="117" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -317,7 +317,7 @@
                                 <rect key="frame" x="20" y="268" width="180" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Enum (value 2)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-7P-cwQ">
-                                        <rect key="frame" x="20" y="69" width="119" height="13"/>
+                                        <rect key="frame" x="20" y="68" width="119" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -330,19 +330,76 @@
                                     <constraint firstAttribute="bottom" secondItem="Qv2-7P-cwQ" secondAttribute="bottom" constant="8" id="Tn1-DP-8Zb"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfV-pX-G7o">
+                                <rect key="frame" x="20" y="464" width="180" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuw-68-iqX">
+                                        <rect key="frame" x="62" y="39" width="56" height="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.99017969589999999" blue="0.96162636619999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Kuw-68-iqX" firstAttribute="centerY" secondItem="tfV-pX-G7o" secondAttribute="centerY" id="GJl-dx-RSC"/>
+                                    <constraint firstItem="Kuw-68-iqX" firstAttribute="centerX" secondItem="tfV-pX-G7o" secondAttribute="centerX" id="ex6-ca-j7g"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" red="0.87825179973821987" green="0.87825179973821987" blue="0.87825179973821987" alpha="0.18891289893617022" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGG-Vg-gWE">
+                                <rect key="frame" x="400" y="464" width="180" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivb-dg-HZh">
+                                        <rect key="frame" x="44" y="39" width="93" height="13"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ivb-dg-HZh" firstAttribute="centerY" secondItem="dGG-Vg-gWE" secondAttribute="centerY" id="Svb-e2-pk0"/>
+                                    <constraint firstItem="ivb-dg-HZh" firstAttribute="centerX" secondItem="dGG-Vg-gWE" secondAttribute="centerX" id="wpc-fL-VwB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" red="0.68077143324607325" green="0.68077143324607325" blue="0.68077143324607325" alpha="0.27025155141843971" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dHH-wg-oZY" firstAttribute="height" secondItem="M5g-ON-qVj" secondAttribute="height" id="1nj-Ma-BDC"/>
+                            <constraint firstItem="dGG-Vg-gWE" firstAttribute="height" secondItem="tfV-pX-G7o" secondAttribute="height" id="4RN-yW-hqQ"/>
                             <constraint firstItem="M5g-ON-qVj" firstAttribute="height" secondItem="Wjt-O6-rwX" secondAttribute="height" multiplier="0.15" id="Br8-9r-eDi"/>
+                            <constraint firstItem="tfV-pX-G7o" firstAttribute="leading" secondItem="M5g-ON-qVj" secondAttribute="leading" id="Cnh-ay-Der"/>
+                            <constraint firstItem="tfV-pX-G7o" firstAttribute="width" secondItem="Wjt-O6-rwX" secondAttribute="width" multiplier="0.3" id="Df5-pJ-XDw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uvs-zS-Ng0" secondAttribute="trailing" id="FgG-5D-xfq"/>
                             <constraint firstItem="U3D-ua-T8o" firstAttribute="height" secondItem="M5g-ON-qVj" secondAttribute="height" id="GVD-qO-OWR"/>
                             <constraint firstItem="M5g-ON-qVj" firstAttribute="top" secondItem="f3q-bi-TAG" secondAttribute="bottom" constant="8" symbolic="YES" id="Lb9-cF-yRF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dGG-Vg-gWE" secondAttribute="trailing" id="SvT-B4-7ZJ"/>
                             <constraint firstItem="U3D-ua-T8o" firstAttribute="top" secondItem="M5g-ON-qVj" secondAttribute="bottom" constant="8" symbolic="YES" id="Tz1-tY-iJp"/>
                             <constraint firstItem="U3D-ua-T8o" firstAttribute="leading" secondItem="M5g-ON-qVj" secondAttribute="leading" id="X0d-AT-hk4"/>
+                            <constraint firstItem="rRh-Uq-Rkl" firstAttribute="top" secondItem="tfV-pX-G7o" secondAttribute="bottom" constant="8" symbolic="YES" id="bK5-KA-9O6"/>
+                            <constraint firstItem="dGG-Vg-gWE" firstAttribute="width" secondItem="tfV-pX-G7o" secondAttribute="width" id="cGm-he-wdF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="M5g-ON-qVj" secondAttribute="leading" id="hah-Dk-LSA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M5g-ON-qVj" secondAttribute="trailing" id="ihS-VS-f5r"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="tfV-pX-G7o" secondAttribute="leading" id="ijh-8g-I4p"/>
                             <constraint firstItem="rRh-Uq-Rkl" firstAttribute="baseline" secondItem="Uvs-zS-Ng0" secondAttribute="baseline" id="joV-s6-yjB"/>
+                            <constraint firstItem="dGG-Vg-gWE" firstAttribute="bottom" secondItem="tfV-pX-G7o" secondAttribute="bottom" id="qdQ-fW-tlC"/>
+                            <constraint firstItem="tfV-pX-G7o" firstAttribute="height" secondItem="M5g-ON-qVj" secondAttribute="height" id="qf1-rx-abd"/>
                             <constraint firstAttribute="leadingMargin" secondItem="rRh-Uq-Rkl" secondAttribute="leading" id="uJz-Zu-uhp"/>
                             <constraint firstItem="dHH-wg-oZY" firstAttribute="top" secondItem="U3D-ua-T8o" secondAttribute="bottom" constant="8" symbolic="YES" id="xJd-Xc-0K0"/>
                             <constraint firstItem="8xE-pv-tOA" firstAttribute="top" secondItem="Uvs-zS-Ng0" secondAttribute="bottom" constant="8" id="zNs-6v-M96"/>
@@ -389,7 +446,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.99017969585576193" blue="0.96162636615399011" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="qFj-JG-Ic7" secondAttribute="bottom" constant="8" id="rQE-uE-Y1c"/>
                                     <constraint firstItem="qFj-JG-Ic7" firstAttribute="leading" secondItem="OoU-f8-fUw" secondAttribute="leading" constant="8" id="x8K-8b-0RL"/>
@@ -405,7 +462,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.99017969589999999" blue="0.96162636619999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="F5o-0y-pOS" firstAttribute="leading" secondItem="r2Y-W1-dRc" secondAttribute="leading" constant="8" id="0JJ-6C-of5"/>
                                     <constraint firstAttribute="bottom" secondItem="F5o-0y-pOS" secondAttribute="bottom" constant="8" id="RZN-7Y-Z60"/>
@@ -421,7 +478,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.99017969589999999" blue="0.96162636619999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="6Ws-Ko-gRW" firstAttribute="leading" secondItem="RAg-FU-TOL" secondAttribute="leading" constant="8" id="F9A-X0-XYb"/>
                                     <constraint firstAttribute="bottom" secondItem="6Ws-Ko-gRW" secondAttribute="bottom" constant="8" id="nWe-fd-2i6"/>
@@ -437,7 +494,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.99017969589999999" blue="0.96162636619999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="70E-av-40X" firstAttribute="leading" secondItem="6JH-PP-Dtl" secondAttribute="leading" constant="8" id="GZO-hJ-6lJ"/>
                                     <constraint firstAttribute="bottom" secondItem="70E-av-40X" secondAttribute="bottom" constant="8" id="oje-P7-yrr"/>
@@ -453,7 +510,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.99017969589999999" blue="0.96162636619999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ONZ-rq-sLk" secondAttribute="bottom" constant="8" id="cQm-z5-tJ5"/>
                                     <constraint firstItem="ONZ-rq-sLk" firstAttribute="leading" secondItem="9mC-xT-Gbd" secondAttribute="leading" constant="8" id="cs2-gQ-Exg"/>
@@ -469,7 +526,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.99017969589999999" blue="0.96162636619999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1rR-xE-h75" secondAttribute="bottom" constant="8" id="6Ca-Pe-4eu"/>
                                     <constraint firstItem="1rR-xE-h75" firstAttribute="leading" secondItem="16d-xe-QMj" secondAttribute="leading" constant="8" id="bfu-Vu-c8J"/>
@@ -503,7 +560,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.99017969589999999" blue="0.96162636619999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="0mV-3C-5mz" firstAttribute="top" secondItem="VVn-Az-MDX" secondAttribute="bottom" constant="8" symbolic="YES" id="DEL-Df-ybi"/>
                                     <constraint firstItem="VVn-Az-MDX" firstAttribute="leading" secondItem="9Iw-T5-YXK" secondAttribute="leading" constant="20" symbolic="YES" id="GoB-b8-Fb6"/>

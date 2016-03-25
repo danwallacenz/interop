@@ -31,8 +31,8 @@
 /**
  Can't use these enums in Objective C - but can pass it on to Swift code.
  */
-@property (readwrite, strong) id /* Box<Icon> */ _icon1;
-@property (readwrite, strong) id /* Box<Icon> */ _icon2;
+@property (readwrite, strong) id /* Box<Icon> */ _colorIcon;
+@property (readwrite, strong) id /* Box<Icon> */ _imageIcon;
 
 
 // Just pass the enum or struct wrapped in a UIView.

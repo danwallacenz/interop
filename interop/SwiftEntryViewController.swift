@@ -87,10 +87,10 @@ class SwiftEntryViewController: UIViewController {
                 }
                 
                 let boxedColorIcon = Icon.Color(UIColor(red: 10.0/255.0, green: 150/255.0, blue: 150/255.0, alpha: 1.0))
-                objectiveCWithSwiftDataStructuresViewController.icon1 = boxedColorIcon
+                objectiveCWithSwiftDataStructuresViewController.colorIcon = boxedColorIcon
                 
                 if let image = UIImage(named: "ic_music_video") {
-                    objectiveCWithSwiftDataStructuresViewController.icon2 = Icon.Image(image)
+                    objectiveCWithSwiftDataStructuresViewController.imageIcon = Icon.Image(image)
                 }
                 
                 // Call shims on receiver

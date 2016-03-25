@@ -51,8 +51,8 @@
     
     // Boxed labels
     [self.boxedSwiftStructLabel setText: [NSString stringWithFormat:@"self._user = %@", self._user]];
-    [self.boxedSwiftEnumOneLabel setText: [NSString stringWithFormat:@"self._icon1 = %@", self._icon1]];
-    [self.boxedSwiftEnumTwoLabe setText: [NSString stringWithFormat:@"self._icon2 = %@", self._icon2]];
+    [self.boxedSwiftEnumOneLabel setText: [NSString stringWithFormat:@"self._colorIcon = %@", self._colorIcon]];
+    [self.boxedSwiftEnumTwoLabe setText: [NSString stringWithFormat:@"self._imageIcon = %@", self._imageIcon]];
     
     [self layoutExternalProfileViewIfPossible];
     [self layoutExternalColorIconViewIfPossible];
@@ -199,8 +199,8 @@
             = (SwiftBoxedTypesAcceptingViewController *)segue.destinationViewController;
         
         [swiftBoxedTypesAcceptingViewController setUser:self._user];
-        [swiftBoxedTypesAcceptingViewController setColorIcon:self._icon1];
-        [swiftBoxedTypesAcceptingViewController setImageIcon:self._icon2];
+        [swiftBoxedTypesAcceptingViewController setColorIcon:self._colorIcon];
+        [swiftBoxedTypesAcceptingViewController setImageIcon:self._imageIcon];
     }
 }
 

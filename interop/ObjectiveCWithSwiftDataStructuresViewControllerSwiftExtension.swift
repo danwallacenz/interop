@@ -20,21 +20,21 @@ extension ObjectiveCWithSwiftDataStructuresViewController {
         }
     }
     
-    var icon1: Icon {
+    var colorIcon: Icon {
         get {
-            return (_icon1 as! Box<Icon>).value
+            return (_colorIcon as! Box<Icon>).value
         }
         set{
-            _icon1 = Box(newValue)
+            _colorIcon = Box(newValue)
         }
     }
     
-    var icon2: Icon {
+    var imageIcon: Icon {
         get {
-            return (_icon2 as! Box<Icon>).value
+            return (_imageIcon as! Box<Icon>).value
         }
         set{
-            _icon2 = Box(newValue)
+            _imageIcon = Box(newValue)
         }
     }
     
