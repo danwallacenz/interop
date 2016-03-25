@@ -49,4 +49,12 @@ extension ObjectiveCWithSwiftDataStructuresViewController {
             self.showIconViewWithColor(color)
         }
     }
+    
+    /**
+     a shim to allow passing a Swift struct to an Objective-C class
+     */
+    func showProfileViewWithUser(user: User) {
+        self.showProfileForUserWithName(user.name, profileImageURL: user.profileImageURL)
+    }
+    
 }

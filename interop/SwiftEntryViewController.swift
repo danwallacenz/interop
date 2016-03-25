@@ -70,15 +70,15 @@ class SwiftEntryViewController: UIViewController {
         if let objectiveCWithSwiftDataStructuresViewController = segue.destinationViewController as? ObjectiveCWithSwiftDataStructuresViewController {
             if segue.identifier == "Show Swift In ObjC" {
                 
+                // Set Boxed Swift-only types on receiver
                 objectiveCWithSwiftDataStructuresViewController.user = user
                 objectiveCWithSwiftDataStructuresViewController.icon1 = leftIcon
                 if let rightIcon = rightIcon {
                     objectiveCWithSwiftDataStructuresViewController.icon2 = rightIcon
                 }
                 
-                objectiveCWithSwiftDataStructuresViewController.showProfileForUserWithName(
-                    user.name,
-                    profileImageURL: user.profileImageURL)
+                // Call shims
+                objectiveCWithSwiftDataStructuresViewController.showProfileViewWithUser(user)
 
                 if let rightIcon = rightIcon {
                     objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(rightIcon)
