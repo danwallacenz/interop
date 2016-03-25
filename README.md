@@ -3,7 +3,7 @@
 
 ### What is this repository for? ###
 
-* To demonstrate working examples of using Swift-only types such as Swift enummerations and structures with Objective-C.
+* To demonstrate working examples of using Swift-only types such as Swift enumerations and structures with Objective-C.
 
 * Based in large part on a 2015 lecture given by Andy Matuschak <https://www.youtube.com/watch?v=q_Y070VAP0c>
 
@@ -35,36 +35,56 @@ This app has examples of working with **Swift enumerations and stuctures** in Ob
 
 	For example:
 
-	In the Swift extension:
+	***In the Swift extension:***
     
-        extension ObjectiveCClass
-        ...
-        func setSwiftStructWith(swiftStruct: Struct) {
-            self.setSwiftStructWithValueOne( swiftStruct.compatibleValueOne, valueTwo: swiftStruct.compatibleValueTwo )
-        }
-
+        	extension ObjectiveCClass
+        		...
+        		func setSwiftStructWith(swiftStruct: Struct) {
+            	self.setSwiftStructWithValueOne( swiftStruct.compatibleValueOne, valueTwo: swiftStruct.compatibleValueTwo )
+        	}
+        
+		
 	In ObjectiveCClass.h:
 
-        -(void) setSwiftStructWithValueOne: (CompatibleTypeOne *) compatibleValueOne 
-                                  valueTwo: (CompatibleTypeTwo *) compatibleValueOne;
+        		-(void) setSwiftStructWithValueOne: (CompatibleTypeOne *) compatibleValueOne 
+                                  		   valueTwo: (CompatibleTypeTwo *) compatibleValueOne;
     
+		
 	In ObjectiveCClass.m:
 
-	    -(void)setSwiftStructWithValueOne: (CompatibleTypeOne *) compatibleValueOne
-	                             valueTwo: (CompatibleTypeTwo *) compatibleValueTwo {
+	    	 -(void)setSwiftStructWithValueOne: (CompatibleTypeOne *) compatibleValueOne
+	                                 valueTwo: (CompatibleTypeTwo *) compatibleValueTwo {
     
-    	    self.valueOne = compatibleValueOne;
-    	    self.valueTwo = compatibleValueTwo;
-	    }
+    	    	self.valueOne = compatibleValueOne;
+    	    	self.valueTwo = compatibleValueTwo;
+	    	}
+	    
+	
+	***Or by using a convenience initializer defined in the Swift extension:***
+    
+    		extension ObjectiveCClass {
+    
+    		@objc convenience init( compatibleValueOne :CompatibleTypeOne, compatibleValueTwo: CompatibleTypeTwo ){
+        		
+        		let swiftStruct = Struct(valueOne: compatibleValueOne, valueTwo: compatibleValueTwo)
+        		
+        		self.init(swiftStruct: swiftStruct)
+    		}
 
+		
+		
+	and calling it from Objective-C by:
+	
+			[[ObjectiveCClass alloc] initWithValueOne: compatibleValueOne velueTwo: compatibleValueTwo];  
+ 
 
 
 3. ***Wrapping a Swift-only type using the Box Pattern***. You can't use it from within an Objective-C class, but you can pass it to on the a Swift class.
 
-       class Box<T> {
-           let value: T    
-           init(_ value: T){ self.value = value }
-       }
+		class Box<T> {
+           	let value: T    
+           	init(_ value: T){ self.value = value }
+       	}
 
 	In ObjectiveCClass.h: (typing by comment :)
 	

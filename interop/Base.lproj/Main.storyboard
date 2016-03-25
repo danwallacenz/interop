@@ -8,235 +8,6 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Swift / Objective-C Interoperability-->
-        <scene sceneID="mqm-OR-FuJ">
-            <objects>
-                <viewController id="D2w-Zq-6DN" customClass="MainObjCViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gyz-lb-LFa"/>
-                        <viewControllerLayoutGuide type="bottom" id="MvI-lq-ARM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nWf-jC-iZO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xck-Ef-3cV">
-                                <rect key="frame" x="185" y="285" width="231" height="30"/>
-                                <state key="normal" title="Using Swift enums in Objective-C"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="fx1-CC-oYU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQv-Wt-a2K">
-                                <rect key="frame" x="184" y="323" width="233" height="30"/>
-                                <state key="normal" title="Using Swift structs in Objective-C"/>
-                                <connections>
-                                    <segue destination="Kzx-rX-VWJ" kind="show" identifier="showStructVC" id="Qsk-rC-ZIp"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="BQv-Wt-a2K" firstAttribute="centerX" secondItem="xck-Ef-3cV" secondAttribute="centerX" id="ByL-Wq-qIA"/>
-                            <constraint firstItem="BQv-Wt-a2K" firstAttribute="top" secondItem="xck-Ef-3cV" secondAttribute="bottom" constant="8" id="LQZ-S8-tTA"/>
-                            <constraint firstItem="xck-Ef-3cV" firstAttribute="centerY" secondItem="nWf-jC-iZO" secondAttribute="centerY" id="vkH-gU-GoP"/>
-                            <constraint firstItem="xck-Ef-3cV" firstAttribute="centerX" secondItem="nWf-jC-iZO" secondAttribute="centerX" id="xmg-66-V8M"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Swift / Objective-C Interoperability" id="FT0-KZ-k3r"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V5S-zd-72w" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-743" y="-896"/>
-        </scene>
-        <!--Obj-C VC Setting IconView-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ObjCEnumViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B6-dQ-Las">
-                                <rect key="frame" x="110" y="285" width="381" height="30"/>
-                                <state key="normal" title="Show Swift VC setting IconView with Icon enum (image)"/>
-                                <connections>
-                                    <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithImage" id="eGe-ex-u3X"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDn-2T-qiu">
-                                <rect key="frame" x="110" y="323" width="374" height="30"/>
-                                <state key="normal" title="Show Swift VC setting IconView with Icon enum (color)"/>
-                                <connections>
-                                    <segue destination="R6v-Ct-DQM" kind="show" identifier="setIconViewWithColor" id="nNU-Kn-vWF"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="5B6-dQ-Las" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="17a-wY-vMj"/>
-                            <constraint firstItem="5B6-dQ-Las" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1zZ-bq-tS7"/>
-                            <constraint firstItem="iDn-2T-qiu" firstAttribute="top" secondItem="5B6-dQ-Las" secondAttribute="bottom" constant="8" id="Wv1-Vo-HW1"/>
-                            <constraint firstItem="iDn-2T-qiu" firstAttribute="leading" secondItem="5B6-dQ-Las" secondAttribute="leading" id="anf-j1-dn0"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Obj-C VC Setting IconView" id="B7H-1i-hXf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="22" y="-544"/>
-        </scene>
-        <!--ObjC Struct View Controller-->
-        <scene sceneID="vR7-CH-BjP">
-            <objects>
-                <viewController id="go4-5o-cZc" customClass="ObjCStructViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2Aw-Nf-VB8"/>
-                        <viewControllerLayoutGuide type="bottom" id="3hn-4a-S09"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Cd1-7C-7dB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quL-5w-FZA">
-                                <rect key="frame" x="409" y="562" width="171" height="30"/>
-                                <state key="normal" title="Pass through Box&lt;User&gt;"/>
-                                <connections>
-                                    <segue destination="Ae0-Yh-Cw3" kind="show" identifier="showSwiftBoxedUserViewController" id="Nc7-0H-v3F"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="3hn-4a-S09" firstAttribute="top" secondItem="quL-5w-FZA" secondAttribute="bottom" constant="8" symbolic="YES" id="j5E-hW-sqe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="quL-5w-FZA" secondAttribute="trailing" id="udv-PV-0DC"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KFZ-WN-jQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1686" y="-1219"/>
-        </scene>
-        <!--Swift Boxed User View Controller-->
-        <scene sceneID="mHS-WR-gD2">
-            <objects>
-                <viewController id="Ae0-Yh-Cw3" customClass="SwiftBoxedUserViewController" customModule="interop" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KDN-p8-2vJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kem-3z-Pnx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KL5-Cr-FSa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Fi-3Q-FYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2373" y="-1218"/>
-        </scene>
-        <!--SwiftVC View Controller-->
-        <scene sceneID="nyY-hc-Bvz">
-            <objects>
-                <viewController id="R6v-Ct-DQM" customClass="SwiftVCViewController" customModule="interop" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hrc-QC-xgc"/>
-                        <viewControllerLayoutGuide type="bottom" id="reY-7a-T7h"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JPb-Hj-8eC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-df-0ne">
-                                <rect key="frame" x="180" y="285" width="241" height="30"/>
-                                <state key="normal" title="Pass Swift enum to Objective-C VC"/>
-                                <connections>
-                                    <segue destination="Khi-Vz-Go5" kind="show" identifier="showLegacyVC" id="BnX-U6-qw4"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="T7p-df-0ne" firstAttribute="centerY" secondItem="JPb-Hj-8eC" secondAttribute="centerY" id="n9L-f2-R71"/>
-                            <constraint firstItem="T7p-df-0ne" firstAttribute="centerX" secondItem="JPb-Hj-8eC" secondAttribute="centerX" id="qtR-5d-yVc"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oHz-Ia-U77" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="874" y="-544"/>
-        </scene>
-        <!--Old Style View Controller-->
-        <scene sceneID="EdB-uz-bDE">
-            <objects>
-                <viewController id="Khi-Vz-Go5" customClass="OldStyleViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jcy-0Y-oUn"/>
-                        <viewControllerLayoutGuide type="bottom" id="iuc-FM-Ogg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jqo-PN-piO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TvC-Fz-p3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1686" y="-544"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hZp-db-cSJ">
-            <objects>
-                <navigationController storyboardIdentifier="Alt_Entry_Point" automaticallyAdjustsScrollViewInsets="NO" id="FI8-YO-NLj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S7u-0R-hsm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="D2w-Zq-6DN" kind="relationship" relationship="rootViewController" id="2vv-cC-eL1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nTz-NQ-li2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1443" y="-896"/>
-        </scene>
-        <!--Swift Struct View Controller-->
-        <scene sceneID="Kif-zg-JO0">
-            <objects>
-                <viewController id="Kzx-rX-VWJ" customClass="SwiftStructViewController" customModule="interop" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bzB-xh-XdU"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ki8-h7-UDe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h5D-vO-wje">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXl-rF-klg">
-                                <rect key="frame" x="262" y="550" width="318" height="30"/>
-                                <state key="normal" title="Show Profile View including struct in Obj-C VC"/>
-                                <connections>
-                                    <segue destination="go4-5o-cZc" kind="show" identifier="showLegacyVCWithStuct" id="B8j-FL-r1K"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Ki8-h7-UDe" firstAttribute="top" secondItem="rXl-rF-klg" secondAttribute="bottom" constant="20" id="FJb-Uq-wUB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rXl-rF-klg" secondAttribute="trailing" id="OoH-cd-5yD"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s0q-Aa-mgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="945" y="-852"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="tcs-X6-p94">
             <objects>
@@ -268,24 +39,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvs-zS-Ng0">
-                                <rect key="frame" x="360" y="562" width="220" height="30"/>
-                                <state key="normal" title="Display Swift-only types in ObjC"/>
+                                <rect key="frame" x="312" y="562" width="268" height="30"/>
+                                <state key="normal" title="Display Swift-only types in Objective-C"/>
                                 <connections>
                                     <segue destination="kbF-k9-G65" kind="show" identifier="Show Swift In ObjC" id="dy0-Fp-5Sh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRh-Uq-Rkl">
-                                <rect key="frame" x="20" y="562" width="81" height="30"/>
-                                <state key="normal" title="Deprecated"/>
-                                <connections>
-                                    <segue destination="D2w-Zq-6DN" kind="show" id="vWz-Kk-VDS"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-ON-qVj" userLabel="Struct View">
                                 <rect key="frame" x="20" y="72" width="560" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Struct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-Op-e3T">
-                                        <rect key="frame" x="20" y="68" width="73" height="14"/>
+                                        <rect key="frame" x="20" y="69" width="73" height="13"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -301,7 +65,7 @@
                                 <rect key="frame" x="20" y="170" width="180" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Enum (value 1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zre-dc-Hcd">
-                                        <rect key="frame" x="8" y="68" width="117" height="14"/>
+                                        <rect key="frame" x="8" y="69" width="117" height="13"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -317,7 +81,7 @@
                                 <rect key="frame" x="20" y="268" width="180" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Swift Enum (value 2)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-7P-cwQ">
-                                        <rect key="frame" x="20" y="68" width="119" height="14"/>
+                                        <rect key="frame" x="20" y="69" width="119" height="13"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -334,7 +98,7 @@
                                 <rect key="frame" x="20" y="464" width="180" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuw-68-iqX">
-                                        <rect key="frame" x="62" y="39" width="56" height="14"/>
+                                        <rect key="frame" x="62" y="39" width="56" height="13"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -357,8 +121,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGG-Vg-gWE">
                                 <rect key="frame" x="400" y="464" width="180" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivb-dg-HZh">
-                                        <rect key="frame" x="44" y="39" width="93" height="13"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Objective-C code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivb-dg-HZh">
+                                        <rect key="frame" x="45" y="39" width="92" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -389,18 +153,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Uvs-zS-Ng0" secondAttribute="trailing" id="FgG-5D-xfq"/>
                             <constraint firstItem="U3D-ua-T8o" firstAttribute="height" secondItem="M5g-ON-qVj" secondAttribute="height" id="GVD-qO-OWR"/>
                             <constraint firstItem="M5g-ON-qVj" firstAttribute="top" secondItem="f3q-bi-TAG" secondAttribute="bottom" constant="8" symbolic="YES" id="Lb9-cF-yRF"/>
+                            <constraint firstItem="Uvs-zS-Ng0" firstAttribute="top" secondItem="dGG-Vg-gWE" secondAttribute="bottom" constant="8" id="Sme-ed-FKh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dGG-Vg-gWE" secondAttribute="trailing" id="SvT-B4-7ZJ"/>
                             <constraint firstItem="U3D-ua-T8o" firstAttribute="top" secondItem="M5g-ON-qVj" secondAttribute="bottom" constant="8" symbolic="YES" id="Tz1-tY-iJp"/>
                             <constraint firstItem="U3D-ua-T8o" firstAttribute="leading" secondItem="M5g-ON-qVj" secondAttribute="leading" id="X0d-AT-hk4"/>
-                            <constraint firstItem="rRh-Uq-Rkl" firstAttribute="top" secondItem="tfV-pX-G7o" secondAttribute="bottom" constant="8" symbolic="YES" id="bK5-KA-9O6"/>
                             <constraint firstItem="dGG-Vg-gWE" firstAttribute="width" secondItem="tfV-pX-G7o" secondAttribute="width" id="cGm-he-wdF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="M5g-ON-qVj" secondAttribute="leading" id="hah-Dk-LSA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M5g-ON-qVj" secondAttribute="trailing" id="ihS-VS-f5r"/>
                             <constraint firstAttribute="leadingMargin" secondItem="tfV-pX-G7o" secondAttribute="leading" id="ijh-8g-I4p"/>
-                            <constraint firstItem="rRh-Uq-Rkl" firstAttribute="baseline" secondItem="Uvs-zS-Ng0" secondAttribute="baseline" id="joV-s6-yjB"/>
                             <constraint firstItem="dGG-Vg-gWE" firstAttribute="bottom" secondItem="tfV-pX-G7o" secondAttribute="bottom" id="qdQ-fW-tlC"/>
                             <constraint firstItem="tfV-pX-G7o" firstAttribute="height" secondItem="M5g-ON-qVj" secondAttribute="height" id="qf1-rx-abd"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="rRh-Uq-Rkl" secondAttribute="leading" id="uJz-Zu-uhp"/>
                             <constraint firstItem="dHH-wg-oZY" firstAttribute="top" secondItem="U3D-ua-T8o" secondAttribute="bottom" constant="8" symbolic="YES" id="xJd-Xc-0K0"/>
                             <constraint firstItem="8xE-pv-tOA" firstAttribute="top" secondItem="Uvs-zS-Ng0" secondAttribute="bottom" constant="8" id="zNs-6v-M96"/>
                             <constraint firstItem="dHH-wg-oZY" firstAttribute="leading" secondItem="M5g-ON-qVj" secondAttribute="leading" id="zS1-3J-EDC"/>
@@ -742,8 +504,4 @@
             <point key="canvasLocation" x="874" y="-1664"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="vWz-Kk-VDS"/>
-        <segue reference="nNU-Kn-vWF"/>
-    </inferredMetricsTieBreakers>
 </document>
