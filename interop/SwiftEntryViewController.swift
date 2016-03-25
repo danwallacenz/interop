@@ -70,14 +70,14 @@ class SwiftEntryViewController: UIViewController {
         if let objectiveCWithSwiftDataStructuresViewController = segue.destinationViewController as? ObjectiveCWithSwiftDataStructuresViewController {
             if segue.identifier == "Show Swift In ObjC" {
                 
-                // Set Boxed Swift-only types on receiver
+                // Send Boxed Swift-only types to receiver
                 objectiveCWithSwiftDataStructuresViewController.user = user
                 objectiveCWithSwiftDataStructuresViewController.icon1 = leftIcon
                 if let rightIcon = rightIcon {
                     objectiveCWithSwiftDataStructuresViewController.icon2 = rightIcon
                 }
                 
-                // Call shims
+                // Call shims on receiver
                 objectiveCWithSwiftDataStructuresViewController.showProfileViewWithUser(user)
 
                 if let rightIcon = rightIcon {
@@ -85,10 +85,24 @@ class SwiftEntryViewController: UIViewController {
                 }
                 
                 objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(leftIcon)
+                
+                // Send 'external' views wrapping Swift-only types to receiver
+                if let externalProfileView = createExternalProfileView() {
+                    objectiveCWithSwiftDataStructuresViewController.externalProfileView = externalProfileView
+                }
             }
         }
     }
 
+    // MARK: - 'External' view creation
+    
+    private func createExternalProfileView() -> ProfileView? {
+        guard let url = NSURLComponents(string:"https://andymatuschak.org")?.URL else { return nil }
+        let user = User(name: "Andy Matuschak", profileImageURL:url)
+        let externalProfileView = ProfileView(user: user)
+        return externalProfileView
+    }
+    
     
     // MARK: - Layout
     private func addLeftEnum(){

@@ -45,23 +45,51 @@
     
     [self setTitle:@"Swift Types in Objective-C"];
     
-    [self layoutTopProfileView];
-    [self layoutTopIconViewWithColor];
-    [self layoutTopIconViewWithImage];
+    [self layoutTopProfileViewIfPossible];
+    [self layoutTopIconViewWithColorIfPossible];
+    [self layoutTopIconViewWithImageIfPossible];
     
+    // Borders
+    int containerBorderWidth = 2;
     [self.topStructView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.topStructView.layer setBorderWidth:1];
+    [self.topStructView.layer setBorderWidth:containerBorderWidth];
+    
     [self.topColorEnumView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.topColorEnumView.layer setBorderWidth:1];
+    [self.topColorEnumView.layer setBorderWidth:containerBorderWidth];
+    
     [self.topImageEnumView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.topImageEnumView.layer setBorderWidth:1];
+    [self.topImageEnumView.layer setBorderWidth:containerBorderWidth];
+    
+    [self.bottomStructView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.bottomStructView.layer setBorderWidth:containerBorderWidth];
     
     [self.boxedSwiftTypesLabelsContainer.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.boxedSwiftTypesLabelsContainer.layer setBorderWidth:1];
+    [self.boxedSwiftTypesLabelsContainer.layer setBorderWidth:containerBorderWidth];
     
+    // Boxed labels
     [self.boxedSwiftStructLabel setText: [NSString stringWithFormat:@"self._user = %@", self._user]];
     [self.boxedSwiftEnumOneLabel setText: [NSString stringWithFormat:@"self._icon1 = %@", self._icon1]];
     [self.boxedSwiftEnumTwoLabe setText: [NSString stringWithFormat:@"self._icon2 = %@", self._icon2]];
+    
+    [self layoutExternalProfileViewIfPossible];
+    
+}
+
+-(void) layoutExternalProfileViewIfPossible {
+   
+    if (self.externalProfileView && self.bottomStructView){
+        
+        [self.externalProfileView setTranslatesAutoresizingMaskIntoConstraints:false];
+        [self.bottomStructView setTranslatesAutoresizingMaskIntoConstraints:false];
+        
+        [self.bottomStructView addSubview: self.externalProfileView];
+        
+        NSDictionary *views = @{ @"externalProfileView" : self.externalProfileView};
+        
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[externalProfileView]-|" options: 0 metrics:nil views:views]];
+        
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[externalProfileView]" options:0 metrics:nil views:views]];
+    }
 }
 
 
@@ -73,7 +101,7 @@
 -(void)showProfileForUserWithName:(NSString *)name profileImageURL: (NSURL *)url {
     
     self.profileView = [[ProfileView alloc] initWithName:name profileImageURL: url];
-    [self layoutTopProfileView];
+    [self layoutTopProfileViewIfPossible];
 }
 
 /**
@@ -83,7 +111,7 @@
 -(void)showIconViewWithColor:(UIColor *)color{
     
     self.colorIconView = [[IconView alloc] initWithColor:color];
-    [self layoutTopIconViewWithColor];
+    [self layoutTopIconViewWithColorIfPossible];
 }
 
 /**
@@ -93,13 +121,13 @@
 -(void)showIconViewWithImage:(UIImage *)image {
     
     self.imageIconView = [[IconView alloc] initWithImage:image];
-    [self layoutTopIconViewWithImage];
+    [self layoutTopIconViewWithImageIfPossible];
 }
 
 
 #pragma mark - View layout
 
-- (void) layoutTopProfileView {
+- (void) layoutTopProfileViewIfPossible {
     
     if (self.profileView && self.topStructView){
     
@@ -116,7 +144,7 @@
     }
 }
 
--(void) layoutTopIconViewWithColor {
+-(void) layoutTopIconViewWithColorIfPossible {
     
     if (self.colorIconView && self.topColorEnumView){
         
@@ -150,7 +178,7 @@
     [container addConstraint:verticalConstraint];
 }
 
--(void) layoutTopIconViewWithImage {
+-(void) layoutTopIconViewWithImageIfPossible {
     
     if (self.imageIconView && self.topImageEnumView){
         

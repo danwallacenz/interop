@@ -436,7 +436,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ONZ-rq-sLk" secondAttribute="bottom" constant="8" id="cQm-z5-tJ5"/>
                                     <constraint firstItem="ONZ-rq-sLk" firstAttribute="leading" secondItem="9mC-xT-Gbd" secondAttribute="leading" constant="8" id="cs2-gQ-Exg"/>
