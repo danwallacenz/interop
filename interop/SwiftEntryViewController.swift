@@ -72,23 +72,33 @@ class SwiftEntryViewController: UIViewController {
                 
                 // Send Boxed Swift-only types to receiver
                 objectiveCWithSwiftDataStructuresViewController.user = user
+                
                 objectiveCWithSwiftDataStructuresViewController.icon1 = leftIcon
+                
                 if let rightIcon = rightIcon {
                     objectiveCWithSwiftDataStructuresViewController.icon2 = rightIcon
                 }
                 
+                
                 // Call shims on receiver
                 objectiveCWithSwiftDataStructuresViewController.showProfileViewWithUser(user)
-
+                
                 if let rightIcon = rightIcon {
                     objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(rightIcon)
                 }
                 
                 objectiveCWithSwiftDataStructuresViewController.showIconViewWithIcon(leftIcon)
                 
+                
                 // Send 'external' views wrapping Swift-only types to receiver
                 if let externalProfileView = createExternalProfileView() {
                     objectiveCWithSwiftDataStructuresViewController.externalProfileView = externalProfileView
+                }
+                
+                objectiveCWithSwiftDataStructuresViewController.externalColorIconView = createExternalColorIconView()
+                
+                if let externalImageIconView = createExternalImageIconView() {
+                    objectiveCWithSwiftDataStructuresViewController.externalImageIconView = externalImageIconView
                 }
             }
         }
@@ -103,6 +113,20 @@ class SwiftEntryViewController: UIViewController {
         return externalProfileView
     }
     
+    private func createExternalColorIconView() -> IconView {
+        let icon = Icon.Color(UIColor(red: 40.0/255.0, green: 140/255.0, blue: 200/255.0, alpha: 1.0))
+        let iconView = IconView(icon: icon)
+        return iconView
+    }
+    
+    private func createExternalImageIconView() -> IconView? {
+        if let image = UIImage(named: "ic_pan_tool") {
+            let icon = Icon.Image(image)
+            let iconView = IconView(icon: icon)
+            return iconView
+        }
+        return nil
+    }
     
     // MARK: - Layout
     private func addLeftEnum(){
