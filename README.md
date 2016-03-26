@@ -29,77 +29,80 @@ This app has examples of working with **Swift enumerations and stuctures** in Ob
 
 
 
-###Passing a Swift-only type in an Objective-C compatible class written in Swift###
+###Passing a Swift-only type in an Objective-C compatible Swift class###
 For example, passing a UIView subclass written in Swift containing a Swift-only type to an Objective-C UIViewController. You'll have to do the layout yourself, but it's the simplest technique to understand.
 
 
 
-###Sending a Swift-only type to Objective-C by employing a shim defined in a Swift extension of an Objective-C class 
+###Creating a Swift-only type within an Objective-C class from anywhere via                                                                 a shim defined in a Swift extension of an Objective-C class 
 
-For example using:
+*For example, using a Swift-only type*
 
 
-	struct SwiftStruct {
-    	let compatibleValueOne: CompatibleTypeOne
-    	let compatibleValueTwo: CompatibleTypeTwo
+	struct User {
+    	let name: String
+    	let profileImageURL: NSURL
 	}
 
-*In the Swift extension:*
+
+*and an Objective-C compatible container*
+
+	class ProfileView: UIView {
+    	var user:User?
+    	
+    	init(user: User) {
+        	self.user = user
+        }
+    }
+    	
+
+*Create a shim in a Swift extension*
     
 	extension ObjectiveCClass
-    ...
-    func setSwiftStructWith(swiftStruct: SwiftStruct) {
-		self.setSwiftStructWithValueOne(swiftStruct.compatibleValueOne,
-			 valueTwo:swiftStruct.compatibleValueTwo )
-    }
+
+    	func showProfileViewWithUser(user: User) {
+        	self.showProfileForUserWithName(user.name, profileImageURL: user.profileImageURL)
+    	}
         
 *In ObjectiveCClass.h:*
 
-	-(void) setSwiftStructWithValueOne:(CompatibleTypeOne *)compatibleValueOne valueTwo:(CompatibleTypeTwo *)compatibleValueOne;
-		// Possibly create a read-only object in the implementation.
+	-(void)showProfileForUserWithName:(NSString *)name profileImageURL: (NSURL *)url;
 
 
 *And calling it from a Swift class*
 
-	let myStruct = SwiftStruct(compatibleValueOne: value1, compatibleValueTwo: value2)
+    let url = NSURLComponents(string:"https://github.com/danwallacenz")?.URL
+    let user = User(name: "Daniel Wallace", profileImageURL: url!)
 	
-	let objectiveCClassInstance = ObjectiveCClass()
+	objectiveCClass.showProfileViewWithUser(user)
 	
-	objectiveCClassInstance.setSwiftStructWith(myStruct)
+*or from an Objective-C class*
+
+	[objectiveCClass showProfileViewWithName:aName profileImageURL: aURL];
 
 
 	
 ### Creating a Swift object & setting its Swift-only type from Objective-C ###
 You can use this technique in setters as well. 
 
-
-    class SwiftClass {
-        
-        private let swiftStruct: SwiftStruct
-        		
-        init(swiftStruct: SwiftStruct) {
-        	self.swiftStruct = swiftStruct
-    	}
-    }
     	
     // preferably in an extension		
-    extension SwiftClass {
+	extension ProfileView {
     
-    	@objc convenience init( compatibleValueOne :CompatibleTypeOne, compatibleValueTwo: CompatibleTypeTwo ){
-        		
-        	let swiftStruct = SwiftStruct(compatibleValueOne: value1, compatibleValueTwo: value2)
-        	self.init(swiftStruct)
+    	@objc convenience init(name:String, profileImageURL:NSURL ){
+        	
+        	let user = User(name: name, profileImageURL: profileImageURL)
+        	self.init(user: user)
     	}
-    }
 
 		
 		
 *and calling it from Objective-C by:*
 	
-	[[SwiftClass alloc] initWithCompatibleTypeOne: compatibleValueOne CompatibleTypeTwo: compatibleValueTwo];  
+	self.profileView = [[ProfileView alloc] initWithName: aName profileImageURL: aURL];  
   
 
-###Passing a Swift-only type between the two languages using the Box Pattern 
+###Passing a Swift-only type between the two languages using the Box Pattern      
 You can't use these from within an Objective-C class, but you can pass it to on the a Swift class.
 
 	class Box<T> {
@@ -109,50 +112,56 @@ You can't use these from within an Objective-C class, but you can pass it to on 
 
 *In ObjectiveCClass.h: (typing by comment :)*
 	
-		@property (readwrite, strong) id /* Box<SwiftOnlyType> */ _swiftOnlyType;
+		// Strong typing using comments
+		@property (readwrite, strong) id /* Box<User> */ _user;
 
 
 *In a Swift extension create a computed property:*
 
-		extension ObjectiveCClass
-        ...
-        var swiftOnlyType: SwiftOnlyType {
+
+	extension ObjectiveCClass {
+		
+		// Can store the User struct and pass it on to something else. Not usable in Obj-C code though.
+    	var user: User {
         	get {
-            	return (_swiftOnlyType as! Box<SwiftOnlyType>).value
-        	}
+            	return (_user as! Box<User>).value
+       		}
         	set{
-            	_swiftOnlyType = Box(newValue)
+           		 _user = Box(newValue)
         	}
     	}
+    }
 
 *From a Swift client, set the Boxed property on the receiver like this:*
 		
-		let objectiveCClass:ObjectiveCClass = ...
-		let mySwiftOnlyType:SwiftOnlyType = ...
-		...
-		objectiveClass.swiftOnlyType = mySwiftOnlyType
+	let user = User(name: "Addy Osmani", profileImageURL: aURL)
+     objectiveCClass.user = user
 		
 	
 *Send it on to a Swift class which looks like:*
 	
-		class SwiftBoxedTypesAcceptingClass { 
+	class MySwiftClass { 
 		...
-		private var mySwiftOnlyType: SwiftOnlyType?
+		private var user:User?
 		...
 		
-	    func setSwiftOnlyType(swiftOnlyType: AnyObject?) {
-        	if let swiftOnlyType = swiftOnlyType as? Box<SwiftOnlyType> {
-            	mySwiftOnlyType = swiftOnlyType.value
-        	}
-    	}
+    func setUser(user: AnyObject?){
+        if let user = user as? Box<User> {
+            self.user = user.value
+        }
+    }
 	
-*from Objective-C by:*
+*from Objective-C:*
+
+	[mySwiftClass setUser:self._user];
 	
-		@property (readwrite, strong) SwiftBoxedTypesAcceptingClass *swiftBoxedTypesAcceptingClass;
-		...
-		[swiftBoxedTypesAcceptingClass setSwiftOnlyType:self._swiftOnlyType];
+Inspecting the Boxed User class in Objective-C	you'll see:
+	`self._user = interop.Box<interop.User>`
+	
 		
-Convoluted I know.
+###Convoluted I know. Still...we want to use these powerfull and safe Swift-oly types.###
+
+ **There are examples of using Swift enums as well as Swift structures in the source.**
 
 
 ### Who do I talk to? ###
