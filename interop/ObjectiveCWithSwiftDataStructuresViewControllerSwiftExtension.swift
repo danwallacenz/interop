@@ -57,4 +57,17 @@ extension ObjectiveCWithSwiftDataStructuresViewController {
         self.showProfileForUserWithName(user.name, profileImageURL: user.profileImageURL)
     }
     
+    
+    /**
+        Update the user name from Objective-C or Swift via a 'partial' computed property.
+    */
+    @objc var userName: String {
+        get { return user.name }
+        set {
+            user = User(
+                name: newValue,
+                profileImageURL: user.profileImageURL
+            )
+        }
+    }
 }

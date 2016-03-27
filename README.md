@@ -158,14 +158,15 @@ You can't use these from within an Objective-C class, but you can pass it to on 
 Inspecting the Boxed User class in Objective-C	you'll see:
 	`self._user = interop.Box<interop.User>`
 
-*Using this, you can expose the values of the struct as Objective-C properties:*
-
-TODO: Implement this
+*Using this, you can expose the 'partial' values of the struct as Objective-C properties:*
 	
 	extension ObjectiveCClass {
 		
+		// can now set he user.name property of the User from Swift and Objective-C.
+		// Can set user.profileImageURL in a similar way.
+		
 		@objc var userName: String {
-			get { user.name }
+			get { return user.name }
 			set {
 				user = User(
 					name: newValue,

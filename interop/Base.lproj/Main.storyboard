@@ -402,14 +402,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-h2-6MN" userLabel="Profile Container">
-                                <rect key="frame" x="20" y="72" width="560" height="120"/>
+                                <rect key="frame" x="20" y="72" width="560" height="136"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyt-y0-Q3p" userLabel="Profile View" customClass="ProfileView" customModule="interop" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="20" width="520" height="71"/>
+                                        <rect key="frame" x="20" y="20" width="520" height="87"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqv-AG-Dvw">
-                                        <rect key="frame" x="20" y="98" width="29" height="14"/>
+                                        <rect key="frame" x="20" y="115" width="29" height="13"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -426,16 +426,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hc4-cR-tDG">
-                                <rect key="frame" x="20" y="200" width="120" height="120"/>
+                                <rect key="frame" x="20" y="216" width="136" height="136"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuT-Y3-kBo">
-                                        <rect key="frame" x="20" y="98" width="29" height="14"/>
+                                        <rect key="frame" x="20" y="115" width="29" height="13"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBj-a5-U38" customClass="IconView" customModule="interop" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="30" width="60" height="60"/>
+                                        <rect key="frame" x="34" y="34" width="68" height="68"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -451,14 +451,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCC-f7-UxU">
-                                <rect key="frame" x="20" y="328" width="120" height="120"/>
+                                <rect key="frame" x="20" y="360" width="136" height="136"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yv0-Qb-nC4" customClass="IconView" customModule="interop" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="30" width="60" height="60"/>
+                                        <rect key="frame" x="34" y="34" width="68" height="68"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqw-JD-EDV">
-                                        <rect key="frame" x="20" y="99" width="29" height="13"/>
+                                        <rect key="frame" x="20" y="115" width="29" height="13"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -479,7 +479,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cLr-h2-6MN" secondAttribute="trailing" id="3wJ-ds-k7C"/>
-                            <constraint firstItem="cLr-h2-6MN" firstAttribute="height" secondItem="4we-oa-Wlj" secondAttribute="height" multiplier="0.15" id="ANJ-id-sUZ"/>
+                            <constraint firstItem="cLr-h2-6MN" firstAttribute="height" secondItem="4we-oa-Wlj" secondAttribute="height" multiplier="0.17" id="ANJ-id-sUZ"/>
                             <constraint firstItem="hc4-cR-tDG" firstAttribute="top" secondItem="cLr-h2-6MN" secondAttribute="bottom" constant="8" symbolic="YES" id="J0l-XG-HUA"/>
                             <constraint firstItem="TCC-f7-UxU" firstAttribute="top" secondItem="hc4-cR-tDG" secondAttribute="bottom" constant="8" id="Q8v-9n-shw"/>
                             <constraint firstItem="TCC-f7-UxU" firstAttribute="height" secondItem="cLr-h2-6MN" secondAttribute="height" id="SnN-oG-ZjO"/>
@@ -501,7 +501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTN-Cb-skn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="-1664"/>
+            <point key="canvasLocation" x="889" y="-1664"/>
         </scene>
     </scenes>
 </document>

@@ -84,6 +84,11 @@ class SwiftEntryViewController: UIViewController {
                 if let url = NSURLComponents(string:"https://addyosmani.com")?.URL {
                     let boxedUser = User(name: "Addy Osmani", profileImageURL: url)
                     objectiveCWithSwiftDataStructuresViewController.user = boxedUser
+                    
+                    
+                    // Update the userName via an objectiv-C property.
+                    // See
+                    objectiveCWithSwiftDataStructuresViewController.userName = objectiveCWithSwiftDataStructuresViewController.userName + " v1"
                 }
                 
                 let boxedColorIcon = Icon.Color(UIColor(red: 10.0/255.0, green: 150/255.0, blue: 150/255.0, alpha: 1.0))

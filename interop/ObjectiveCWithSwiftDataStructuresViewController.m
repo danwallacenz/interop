@@ -101,6 +101,7 @@
 -(void)showProfileForUserWithName:(NSString *)name profileImageURL: (NSURL *)url {
     
     self.profileView = [[ProfileView alloc] initWithName:name profileImageURL: url];
+
     [self layoutTopProfileViewIfPossible];
 }
 
@@ -188,15 +189,16 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
     
     if ([segue.destinationViewController isKindOfClass:[SwiftBoxedTypesAcceptingViewController class]]){
         
         SwiftBoxedTypesAcceptingViewController *swiftBoxedTypesAcceptingViewController
             = (SwiftBoxedTypesAcceptingViewController *)segue.destinationViewController;
+        
+        
+        // Update User struct using a partial computed property userName - defined in our extension.
+        self.userName = [NSString stringWithFormat: @"%@ + v2", self.userName];
         
         [swiftBoxedTypesAcceptingViewController setUser:self._user];
         [swiftBoxedTypesAcceptingViewController setColorIcon:self._colorIcon];
