@@ -5,7 +5,7 @@ However, we shouldn't avoid using them as they provide convenience and safety. T
 
 ### What is this repository for? ###
 
-* To demonstrate working examples of using Swift-only types such as Swift enumerations and structures with Objective-C.
+* To demonstrate working examples of using Swift-only types such as Swift enumerations and structures with Objective-C - and how to mitigate the impedences that exist.
 
 * Based in large part on a 2015 lecture given by Andy Matuschak <https://www.youtube.com/watch?v=q_Y070VAP0c>
 
@@ -157,13 +157,33 @@ You can't use these from within an Objective-C class, but you can pass it to on 
 	
 Inspecting the Boxed User class in Objective-C	you'll see:
 	`self._user = interop.Box<interop.User>`
+
+*Using this, you can expose the values of the struct as Objective-C properties:*
+
+TODO: Implement this
+	
+	extension ObjectiveCClass {
+		
+		@objc var userName: String {
+			get { user.name }
+			set {
+				user = User(
+					name: newValue,
+					profileImageURL: user.profileImageURL
+				)
+			}
+		}
+		  
 	
 		
-###Convoluted I know. Still...we want to use these powerfull and safe Swift-oly types.###
+Convoluted I know. Still...we want to use these powerful and safe Swift-only types.
 
- **There are examples of using Swift enums as well as Swift structures in the source.**
+ There are examples of using Swift enums as well as Swift structs in the source.
 
 
 ### Who do I talk to? ###
 
+* <https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/>
+* <https://itunes.apple.com/us/book-series/swift-programming-series/id888896989?mt=11>
+* <https://developer.apple.com/videos/play/wwdc2015/401/>
 * Andy Matuschak haha <https://andymatuschak.org>
