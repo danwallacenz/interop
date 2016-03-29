@@ -1,11 +1,12 @@
 # SWIFTY SWIFT in OBJECTIVE-C #
 
-***Often, Swift and Objective code must coexist. Some Swift types are not compatible with Objective-C.
-However, we shouldn't avoid using them as they provide convenience and safety. This shows some ways to help out.***
+Often, Swift and Objective code must coexist but some Swift types are not compatible with Objective-C.
+However, we shouldn't avoid using them as they provide power and safety.
+
 
 ### What is this repository for? ###
 
-* To demonstrate working examples of using Swift-only types such as Swift enumerations and structures with Objective-C - and how to mitigate the impedences that exist.
+* Working examples and documentation of using Swift-only types such as Swift enumerations and structures with Objective-C - and how to mitigate the impedences that exist.
 
 * Based in large part on a 2015 lecture given by Andy Matuschak <https://www.youtube.com/watch?v=q_Y070VAP0c>
 
@@ -25,18 +26,19 @@ Objective-C excludes some Swift types, such as those listed here:
 * Nested types
 * Curried functions
  
-This app has examples of working with **Swift enumerations and stuctures** in Objective-C. While these are not directly compatible, there are techniques to alleviate this to varying degrees. It demonstrates ***four mechanisms***. They are:
+This app has examples of working with Swift enumerations and stuctures in Objective-C. While these are not directly compatible, there are techniques to alleviate this to varying degrees. It demonstrates four mechanisms.
 
-
+ They are:
 
 ###Passing a Swift-only type in an Objective-C compatible Swift class###
 For example, passing a UIView subclass written in Swift containing a Swift-only type to an Objective-C UIViewController. You'll have to do the layout yourself, but it's the simplest technique to understand.
 
 
 
-###Creating a Swift-only type within an Objective-C class from anywhere via                                                                 a shim defined in a Swift extension of an Objective-C class 
+###Creating a Swift-only type within an Objective-C class from anywhere via                                                                 a shim defined in a Swift extension of an Objective-C class   
 
-*For example, using a Swift-only type*
+
+For example, using a Swift-only type
 
 
 	struct User {
@@ -45,7 +47,7 @@ For example, passing a UIView subclass written in Swift containing a Swift-only 
 	}
 
 
-*and an Objective-C compatible container*
+and an Objective-C compatible container.
 
 	class ProfileView: UIView {
     	var user:User?
@@ -56,7 +58,7 @@ For example, passing a UIView subclass written in Swift containing a Swift-only 
     }
     	
 
-*Create a shim in a Swift extension*
+Create a shim in a Swift extension.
     
 	extension ObjectiveCClass
 
@@ -64,19 +66,19 @@ For example, passing a UIView subclass written in Swift containing a Swift-only 
         	self.showProfileForUserWithName(user.name, profileImageURL: user.profileImageURL)
     	}
         
-*In ObjectiveCClass.h:*
+In ObjectiveCClass.h:
 
 	-(void)showProfileForUserWithName:(NSString *)name profileImageURL: (NSURL *)url;
 
 
-*And calling it from a Swift class*
+And calling it from a Swift class
 
     let url = NSURLComponents(string:"https://github.com/danwallacenz")?.URL
     let user = User(name: "Daniel Wallace", profileImageURL: url!)
 	
 	objectiveCClass.showProfileViewWithUser(user)
 	
-*or from an Objective-C class*
+or from an Objective-C class.
 
 	[objectiveCClass showProfileViewWithName:aName profileImageURL: aURL];
 
@@ -97,7 +99,7 @@ You can use this technique in setters as well.
 
 		
 		
-*and calling it from Objective-C by:*
+and calling it from Objective-C by:
 	
 	self.profileView = [[ProfileView alloc] initWithName: aName profileImageURL: aURL];  
   
@@ -110,13 +112,13 @@ You can't use these from within an Objective-C class, but you can pass it to on 
         init(_ value: T){ self.value = value }
     }
 
-*In ObjectiveCClass.h: (typing by comment :)*
+In ObjectiveCClass.h:  (typing by comment :)
 	
 		// Strong typing using comments
 		@property (readwrite, strong) id /* Box<User> */ _user;
 
 
-*In a Swift extension create a computed property:*
+In a Swift extension create a computed property:
 
 
 	extension ObjectiveCClass {
@@ -132,13 +134,13 @@ You can't use these from within an Objective-C class, but you can pass it to on 
     	}
     }
 
-*From a Swift client, set the Boxed property on the receiver like this:*
+From a Swift client, set the Boxed property on the receiver like this:
 		
 	let user = User(name: "Addy Osmani", profileImageURL: aURL)
      objectiveCClass.user = user
 		
 	
-*Send it on to a Swift class which looks like:*
+Send it on to a Swift class which looks like:
 	
 	class MySwiftClass { 
 		...
@@ -151,19 +153,19 @@ You can't use these from within an Objective-C class, but you can pass it to on 
         }
     }
 	
-*from Objective-C:*
+from Objective-C:
 
 	[mySwiftClass setUser:self._user];
 	
 Inspecting the Boxed User class in Objective-C	you'll see:
 	`self._user = interop.Box<interop.User>`
 
-*Using this, you can expose the 'partial' values of the struct as Objective-C properties:*
+Using this, you can expose the 'partial' values of the struct as Objective-C properties:
 	
 	extension ObjectiveCClass {
 		
-		// can now set he user.name property of the User from Swift and Objective-C.
-		// Can set user.profileImageURL in a similar way.
+		// Set the user.name property of the User from Swift and Objective-C.
+		// Set user.profileImageURL in a similar way.
 		
 		@objc var userName: String {
 			get { return user.name }
