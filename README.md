@@ -10,6 +10,11 @@ However, we shouldn't avoid using them as they provide power and safety.
 
 * Based in large part on a 2015 lecture given by Andy Matuschak <https://www.youtube.com/watch?v=q_Y070VAP0c>
 
+#### There is now an official proposal to help with this.####
+<https://github.com/apple/swift-evolution/blob/master/proposals/0058-objectivecbridgeable.md>
+<http://www.russbishop.net/bridges-of-siracusa-county>
+
+
 
 ### What does it do? ###
 
