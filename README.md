@@ -194,4 +194,5 @@ Convoluted I know. Still...we want to use these powerful and safe Swift-only typ
 * <https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/>
 * <https://itunes.apple.com/us/book-series/swift-programming-series/id888896989?mt=11>
 * <https://developer.apple.com/videos/play/wwdc2015/401/>
+* Avoiding the overuse of @objc in Swift <http://www.jessesquires.com/avoiding-objc-in-swift/>
 * Andy Matuschak haha <https://andymatuschak.org>
